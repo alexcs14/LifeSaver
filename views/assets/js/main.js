@@ -3,7 +3,7 @@
 $("#txtpass").focus(function(){
   $("#txtemail").siblings("span").remove();
   var email = $("#txtemail").val();
-  $.post("acceso/validar",{email:email},function(data){
+  $.post("index.php?c=usu&a=validar",{email:email},function(data){
           var data = JSON.parse(data);
           $("#txtemail").siblings("label").after("<span class='error'>"+data[0]+"</span>");
           if(data[1] == false){
@@ -36,8 +36,3 @@ $("#frmLogin").submit(function(e){
     })
     }
 });
-
-
-$("#txtpass").focus(function(){
-  alert("Hola");
-})

@@ -36,7 +36,7 @@ class UsuController{
 //Validar correo
   public function validar(){
     $email[0] = $_POST["email"];
-    $response = $this->users->readUserbyEmail($email); 
+    $response = $this->model->readUserbyEmail($email);
     if(count($response[0])<=0){
       $return = array("El correo no existe",false);
     }else{

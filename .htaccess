@@ -1,5 +1,0 @@
-RewriteEngine on
-
-RewriteRule ^dashboard$ index.php?c=main&a=inicio
-
-RewriteRule ^acceso/validar$ index.php?c=usu&a=validar

@@ -14,5 +14,6 @@
   <h2>Sexo</h2>
   <input type="radio" name="data[]" value="1" required>Hombre
   <input type="radio" name="data[]" value="2" required>Mujer
-  <button type="submit" name="button">Registrar</button>
+  <button type="submit" name="button" class="btn btn-default">Registrar</button>
 </form>
+<a href="?c=main&amp;a=index" class="btn btn-default">Atras</a>
