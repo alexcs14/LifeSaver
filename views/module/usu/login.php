@@ -14,5 +14,5 @@
     </div>
     <button type="submit" name="button" id="btnLogin" class="btn btn-primary" style="margin: 15px;">INICIAR SESION</button>
   </form>
-  <a href="create/usu">Registrarse</a>
+  <a href="registro">Registrarse</a>
 </div>

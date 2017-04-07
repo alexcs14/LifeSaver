@@ -1,8 +1,10 @@
 RewriteEngine on
 
 RewriteRule ^inicio$         ?c=main&a=inicio
-RewriteRule ^create/usu$       ?c=main&a=viewCreate
-RewriteRule ^../inicio$         ?c=main&a=inicio
+RewriteRule ^registro$       ?c=main&a=viewCreate
+RewriteRule ^login$          ?c=main&a=index
 
-
-RewriteRule ^acceso/validar$ index.php?c=usu&a=validar
+RewriteRule ^crear$          ?c=usu&a=create
+RewriteRule ^acceso/validar$ ?c=usu&a=validar
+RewriteRule ^validacion$     index.php?c=usu&a=userAut
+RewriteRule ^CerrarSesion$   ?c=usu&a=logout

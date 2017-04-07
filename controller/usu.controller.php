@@ -12,13 +12,14 @@ class UsuController{
 
 // Crear cuenta
   public function create(){
-    if((strlen($data[5]<8)) || strlen($data[5]>16)){
-      $msn="La contraseña debe tener entre 8 y 16 caracteres";
-      header("location: index.php?c=usu&msn=$msn");
-    }elseif((!preg_match('`[A-Z]`',$data[2])) || (!preg_match('`[a-z]`',$data[2])) || (!preg_match('`[0-9]`',$data[2])) ){
-      $msn="La contraseña debe contener minimo una letra mayuscula, una minuscula y un numero";
-      header("location: index.php?c=usu&msn=$msn");
-    }else{
+    //Validar contraseña con expresiones regulares
+    // if((strlen($data[5]<8)) || strlen($data[5]>16)){
+    //   $res=("La contraseña debe tener entre 8 y 16 caracteres",false);
+    // }elseif((!preg_match('`[A-Z]`',$data[2])) || (!preg_match('`[a-z]`',$data[2])) || (!preg_match('`[0-9]`',$data[2])) ){
+    //   $res=("La contraseña debe contener una mayuscula, una minuscula y un numero",false);
+    // }else{
+
+      //Crear usuario
       $data=$_POST["data"];
       $ver=$_POST["ver"];
       $data[8] = "USUARIO-".date('Ymd')."-".date('hms');
@@ -29,9 +30,8 @@ class UsuController{
       $data[10] = 0;
 
       $result=$this->model->create($data);
-      header("location: index.php?c=main&msn=$result");
-    }
-
+      echo $result;
+    // }
   }
 
 
@@ -47,7 +47,7 @@ class UsuController{
     echo json_encode($return);
 }
 
-//Validar contraseña segun el correo ingresadoa
+//Validar contraseña segun el correo ingresado
   public function userAut(){
     $data[0] = $_POST["email"];
     $data[1] = $_POST["pass"];
@@ -71,7 +71,7 @@ class UsuController{
 
   public function logout(){
     session_destroy();
-    header("location: index.php?c=main&a=index");
+    header("location: login");
   }
 }
 ?>

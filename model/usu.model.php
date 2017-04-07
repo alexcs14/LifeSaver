@@ -10,8 +10,12 @@ class UsuModel{
       $this->pdo = DataBase::connect();
       $this->pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     }catch(PDOException $e){
-      die("Mensaje: ".$e->getMessage()." -- Linea: ".$e->getLine()." -- Archivo: ".$e->getFile());
-    }
+      $cod = $e->getCod();
+      $file = $e->getFile();
+      $line = $e->getLine();
+      $text = $e->getMessage();
+      DataBase::errorLog($cod,$file,$line,$text);
+      $msn="Ha ocurrido un error";    }
   }
 
   public function create($data){
@@ -26,7 +30,12 @@ class UsuModel{
 
       $msn="Usuario guardado con exito";
     } catch (PDOException $e) {
-      die("Mensaje: ".$e->getMessage()." -- Linea: ".$e->getLine()." -- Archivo: ".$e->getFile());
+      $cod = $e->getCode();
+      $file = $e->getFile();
+      $line = $e->getLine();
+      $text = $e->getMessage();
+      DataBase::errorLog($cod,$file,$line,$text);
+      $msn="Ha ocurrido un error";
     }
     return $msn;
   }
@@ -38,9 +47,13 @@ class UsuModel{
         $query -> execute(array($data[0]));
         $result = $query->fetch(PDO::FETCH_BOTH);
     }catch(PDOException $e){
-      die("Mensaje: ".$e->getMessage()." -- Linea: ".$e->getLine()." -- Archivo: ".$e->getFile());
+      $cod = $e->getCod();
+      $file = $e->getFile();
+      $line = $e->getLine();
+      $text = $e->getMessage();
+      DataBase::errorLog($cod,$file,$line,$text);
     }
-    return $result;
+      return $result;
   }
 
   public function __DESTRUCT(){
