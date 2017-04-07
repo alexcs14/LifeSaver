@@ -3,7 +3,7 @@
 $("#txtpass").focus(function(){
   $("#txtemail").siblings("span").remove();
   var email = $("#txtemail").val();
-  $.post("index.php?c=usu&a=validar",{email:email},function(data){
+  $.post("acceso/validar",{email:email},function(data){
           var data = JSON.parse(data);
           $("#txtemail").siblings("label").after("<span class='error'>"+data[0]+"</span>");
           if(data[1] == false){
@@ -17,11 +17,18 @@ $("#txtpass").focus(function(){
 $("#txtemail").focus(function(){
   $(this).siblings("span").remove();
 });
+// -- Fin -- //
 
 
-$("#password").keyup(function(){
-  regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,18}[^'\s]/
-});
+// Validar contraseña (numeros, mayusculas, etc.)
+
+// $("#verify").keyup(function(){
+//
+//   })
+// });
+
+// -- Fin -- //
+
 
 //Contraseñas diferentes
 
@@ -30,14 +37,17 @@ $("#verify").keyup(function(){
   var ver = $("#verify").val();
     if(ver != pas){
       var msn = "Las contraseñas no coinciden";
-      $("#verify").siblings("span").show();
+      $("#verify").siblings(".veri").show();
       $("#btnRegister").attr("disabled",true);
     }else{
-      $("#verify").siblings("span").hide();
+      $("#verify").siblings(".veri").hide();
       $("#btnRegister").attr("disabled",false);
     }
     $("#verify").siblings("label").after("<span class='error'>"+msn+"</span>").remove()
   });
+  // -- Fin -- //
+
+
 
 //Inicio de sesion si el usuario existe
 
@@ -46,14 +56,15 @@ $("#frmLogin").submit(function(e){
   if($(this).parsley().isValid()){
     var email=$("#txtemail").val();
     var pass=$("#txtpass").val();
-    $.post("index.php?c=usu&a=userAut",{email:email, pass:pass},function(data){
+    $.post("validacion",{email:email, pass:pass},function(data){
       var data = JSON.parse(data);
 
       if(data[0] == true){
-        document.location.href="index.php?c=main&a=inicio";
+        document.location.href="inicio";
       }else{
         alert(data[1]);
       }
     })
     }
 });
+// -- Fin -- //
