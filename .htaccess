@@ -1,5 +1,8 @@
 RewriteEngine on
 
-RewriteRule ^dashboard$ index.php?c=main&a=inicio
+RewriteRule ^inicio$         ?c=main&a=inicio
+RewriteRule ^create/usu$       ?c=main&a=viewCreate
+RewriteRule ^../inicio$         ?c=main&a=inicio
+
 
 RewriteRule ^acceso/validar$ index.php?c=usu&a=validar
