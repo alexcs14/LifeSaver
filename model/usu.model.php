@@ -22,7 +22,7 @@ class UsuModel{
 
       $sql="INSERT INTO acceso VALUES(?,?,?,?,?)";
       $query=$this->pdo->prepare($sql);
-      $query->execute(array($data[9],$data[10],$data[5],$data[11],$data[12]));
+      $query->execute(array($data[9],$data[8],$data[5],$data[10],$data[11]));
 
       $msn="Usuario guardado con exito";
     } catch (PDOException $e) {
@@ -33,7 +33,7 @@ class UsuModel{
 
   public function readUserbyEmail($data){
     try{
-        $sql="SELECT usuario.usu_cod,usu_nom,usu_ape,acc_pass FROM usuario INNER JOIN acceso ON acceso.usu_cod = usuario.usu_cod WHERE usu_email = ?";
+        $sql="SELECT usuario.usu_cod,usu_nom,usu_ape,acc_pass,acc_token FROM usuario INNER JOIN acceso ON acceso.usu_cod = usuario.usu_cod WHERE usu_email = ?";
         $query = $this->pdo->prepare($sql);
         $query -> execute(array($data[0]));
         $result = $query->fetch(PDO::FETCH_BOTH);

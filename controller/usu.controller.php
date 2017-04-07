@@ -12,24 +12,26 @@ class UsuController{
 
 // Crear cuenta
   public function create(){
-    $data=$_POST["data"];
-    $ver=$_POST["ver"];
-    if($ver===$data[5]){
-
+    if((strlen($data[5]<8)) || strlen($data[5]>16)){
+      $msn="La contraseña debe tener entre 8 y 16 caracteres";
+      header("location: index.php?c=usu&msn=$msn");
+    }elseif((!preg_match('`[A-Z]`',$data[2])) || (!preg_match('`[a-z]`',$data[2])) || (!preg_match('`[0-9]`',$data[2])) ){
+      $msn="La contraseña debe contener minimo una letra mayuscula, una minuscula y un numero";
+      header("location: index.php?c=usu&msn=$msn");
+    }else{
+      $data=$_POST["data"];
+      $ver=$_POST["ver"];
       $data[8] = "USUARIO-".date('Ymd')."-".date('hms');
       $data[7] = 1;
       $data[5] = password_hash($data[5],PASSWORD_DEFAULT);
-      $data[10] = $data[8];
       $data[9] = randCod(50);
-      $data[12] = "Inactivo";
-      $data[11] = 0;
+      $data[11] = "Inactivo";
+      $data[10] = 0;
 
       $result=$this->model->create($data);
       header("location: index.php?c=main&msn=$result");
-    }else{
-      $msn="Las contraseñas no son similares";
-      header("location: index.php?c=main&a=viewCreate&msn=$msn");
     }
+
   }
 
 
@@ -45,7 +47,7 @@ class UsuController{
     echo json_encode($return);
 }
 
-//Validar contraseña segun el correo ingresado
+//Validar contraseña segun el correo ingresadoa
   public function userAut(){
     $data[0] = $_POST["email"];
     $data[1] = $_POST["pass"];
@@ -63,13 +65,13 @@ class UsuController{
     }else{
       $return = array(false,"Contraseña incorrecta");
     }
-
     echo json_encode($return);
   }
 
+
   public function logout(){
     session_destroy();
-    header("Location: inicio");
+    header("location: index.php?c=main&a=index");
   }
 }
 ?>
