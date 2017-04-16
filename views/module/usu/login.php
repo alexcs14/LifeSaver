@@ -14,5 +14,6 @@
     </div>
     <button type="submit" name="button" id="btnLogin" class="btn btn-primary" style="margin: 15px;">INICIAR SESION</button>
   </form>
+  <a href="recover">¿Olvidaste tu contraseña?</a><br>
   <a href="registro">Registrarse</a>
 </div>

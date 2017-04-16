@@ -24,6 +24,10 @@ class MainController{
     require_once 'views/index.php';
     require_once 'views/include/footer.php';
   }
-
+  public function recoverPass(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/sendEmail.php';
+    require_once 'views/include/footer.php';
+  }
 }
 ?>
