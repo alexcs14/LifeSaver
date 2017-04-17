@@ -10,7 +10,7 @@
   <h2>Documento de identidad</h2><input type="text" name="data[]" placeholder="# documento" required>
   <h2>Email</h2><input type="email" name="data[]" placeholder="Email" required>
   <h2>Contraseña</h2><input type="password" name="data[]" placeholder="Contraseña" id="password" required>
-  <label for="password" class="password"></label>
+  <label for="password" class="pas"></label>
   <h2>Verificar contraseña</h2><input type="password" name="ver" placeholder="Repetir contraseña" id="verify" required>
   <label for="verify" class="veri"></label>
   <h2>Sexo</h2>

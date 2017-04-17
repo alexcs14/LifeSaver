@@ -22,10 +22,18 @@ $("#txtemail").focus(function(){
 
 // Validar contraseña (numeros, mayusculas, etc.)
 
-// $("#verify").keyup(function(){
-//
-//   })
-// });
+$("#verify").focus(function(){
+  var yp = $("#password").val();
+  $.post("crear",{yp:yp},function(data){
+    var data=JSON.parse(data);
+    $("#password").siblings(".pas").after("<span class='error'>"+data[0]+"</span>");
+    if(data[1] == false){
+      $("#btnLogin").attr("disabled",true);
+    }else{
+      $("#btnLogin").attr("disabled",false);
+    }
+  })
+})
 
 // -- Fin -- //
 
@@ -37,13 +45,13 @@ $("#verify").keyup(function(){
   var ver = $("#verify").val();
     if(ver != pas){
       var msn = "Las contraseñas no coinciden";
-      $("#verify").siblings(".veri").show();
+      $("#verify").siblings("span").show();
       $("#btnRegister").attr("disabled",true);
     }else{
-      $("#verify").siblings(".veri").hide();
+      $("#verify").siblings("span").hide();
       $("#btnRegister").attr("disabled",false);
     }
-    $("#verify").siblings("label").after("<span class='error'>"+msn+"</span>").remove()
+    $("#verify").siblings(".veri").after("<span class='error'>"+msn+"</span>").remove()
   });
   // -- Fin -- //
 
