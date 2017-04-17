@@ -12,31 +12,34 @@ class UsuController{
 
 // Crear cuenta
   public function create(){
-    $data=$_POST["data"];
-    $ver=$_POST["ver"];
-    if($ver===$data[5]){
+    // Validar contraseña con expresiones regulares
+    if((strlen($data[5]<8)) || strlen($data[5]>16)){
+      $res=("La contraseña debe tener entre 8 y 16 caracteres",false);
+    }else{
 
+      //Crear usuario
+      $data=$_POST["data"];
+      $ver=$_POST["ver"];
       $data[8] = "USUARIO-".date('Ymd')."-".date('hms');
       $data[7] = 1;
       $data[5] = password_hash($data[5],PASSWORD_DEFAULT);
-      $data[10] = $data[8];
       $data[9] = randCod(50);
-      $data[12] = "Inactivo";
-      $data[11] = 0;
+      $data[11] = "Inactivo";
+      $data[10] = 0;
 
       $result=$this->model->create($data);
-      header("location: index.php?c=main&msn=$result");
-    }else{
-      $msn="Las contraseñas no son similares";
-      header("location: index.php?c=main&a=viewCreate&msn=$msn");
+
+      $res=("",true);
+      // echo $result;
     }
+    echo json_encode($res);
   }
 
 
 //Validar correo
   public function validar(){
     $email[0] = $_POST["email"];
-    $response = $this->users->readUserbyEmail($email); 
+    $response = $this->model->readUserbyEmail($email);
     if(count($response[0])<=0){
       $return = array("El correo no existe",false);
     }else{
@@ -63,13 +66,13 @@ class UsuController{
     }else{
       $return = array(false,"Contraseña incorrecta");
     }
-
     echo json_encode($return);
   }
 
+
   public function logout(){
     session_destroy();
-    header("Location: inicio");
+    header("location: login");
   }
 }
 ?>

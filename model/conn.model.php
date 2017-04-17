@@ -21,5 +21,12 @@ class DataBase{
   public static function disconnect(){
     self::$dbconn=null;
   }
+
+  //Errores DataBase
+  public function errorLog($cod,$file,$line,$text){
+    $log = fopen("system.log","a");
+    fwrite($log,date("d-m-Y h:i:s")."  Error: #".$cod." -> ".$text." Archivo: ".$file." Linea: (".$line.")"."\r\n");
+    fclose($log);
+  }
 }
 ?>

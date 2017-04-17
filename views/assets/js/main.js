@@ -11,12 +11,51 @@ $("#txtpass").focus(function(){
           }else{
             $("#btnLogin").attr("disabled",false);
           }
-  });
-})
+      })
+});
 
 $("#txtemail").focus(function(){
   $(this).siblings("span").remove();
+});
+// -- Fin -- //
+
+
+// Validar contraseña (numeros, mayusculas, etc.)
+
+$("#verify").focus(function(){
+  var yp = $("#password").val();
+  $.post("crear",{yp:yp},function(data){
+    var data=JSON.parse(data);
+    $("#password").siblings(".pas").after("<span class='error'>"+data[0]+"</span>");
+    if(data[1] == false){
+      $("#btnLogin").attr("disabled",true);
+    }else{
+      $("#btnLogin").attr("disabled",false);
+    }
+  })
 })
+
+// -- Fin -- //
+
+
+//Contraseñas diferentes
+
+$("#verify").keyup(function(){
+  var pas = $("#password").val();
+  var ver = $("#verify").val();
+    if(ver != pas){
+      var msn = "Las contraseñas no coinciden";
+      $("#verify").siblings("span").show();
+      $("#btnRegister").attr("disabled",true);
+    }else{
+      $("#verify").siblings("span").hide();
+      $("#btnRegister").attr("disabled",false);
+    }
+    $("#verify").siblings(".veri").after("<span class='error'>"+msn+"</span>").remove()
+  });
+  // -- Fin -- //
+
+
 
 //Inicio de sesion si el usuario existe
 
@@ -25,19 +64,15 @@ $("#frmLogin").submit(function(e){
   if($(this).parsley().isValid()){
     var email=$("#txtemail").val();
     var pass=$("#txtpass").val();
-    $.post("acceso",{email:email, pass:pass},function(data){
+    $.post("validacion",{email:email, pass:pass},function(data){
       var data = JSON.parse(data);
 
       if(data[0] == true){
-        document.location.href="?c=main&a=inicio";
+        document.location.href="inicio";
       }else{
         alert(data[1]);
       }
     })
     }
 });
-
-
-$("#txtpass").focus(function(){
-  alert("Hola");
-})
+// -- Fin -- //
