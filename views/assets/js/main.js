@@ -14,6 +14,23 @@ $("#txtpass").focus(function(){
       })
 });
 
+//Correo existente - Registro
+
+$("#password").keyup(function(){
+  var email = $("#emailRegis").val();
+  $.post("valCorreo",{email:email},function(data){
+    var data = JSON.parse(data);
+    // alert(data[0]);
+    if(data[1] == false){
+      $("btnRegister").attr("disabled",true);
+    }else{
+      $("btnRegister").attr("disabled",false);
+    }
+  })
+})
+
+// -- Fin -- //
+
 $("#txtemail").focus(function(){
   $(this).siblings("span").remove();
 });
@@ -26,10 +43,10 @@ $("#password").keyup(function(){
   var data = $("#password").val();
   var cant = data.length;
   if((cant<8)||(cant>16)){
+    $("#password").siblings("span.error").show();
     $("#btnRegister").attr("disabled",true);
-    $("#password").siblings(".pas").show();
   }else{
-    $("#password").siblings(".pas").hide();
+    $("#password").siblings("span.error").hide();
     $("#btnRegister").attr("disabled",false);
   }
   $("#password").siblings(".pas").after("<span class='error'>La contraseña debe ser mayor de 8 y menor a 16 caracteres</span>").remove();
@@ -42,13 +59,13 @@ $("#verify").keyup(function(){
   var ver = $("#verify").val();
     if(ver != pas){
       var msn = "Las contraseñas no coinciden";
-      $("#verify").siblings(".veri").show();
+      $("#verify").siblings("span.error2").show();
       $("#btnRegister").attr("disabled",true);
     }else{
-      $("#verify").siblings(".veri").hide();
+      $("#verify").siblings("span.error2").hide();
       $("#btnRegister").attr("disabled",false);
     }
-    $("#verify").siblings(".veri").after("<span class='error'>"+msn+"</span>").remove()
+    $("#verify").siblings(".veri").after("<span class='error2'>"+msn+"</span>").remove()
   });
   // -- Fin -- //
 
@@ -72,4 +89,11 @@ $("#frmLogin").submit(function(e){
     })
     }
 });
+// -- Fin -- //
+
+
+// Correo existente, Registro
+
+
+
 // -- Fin -- //

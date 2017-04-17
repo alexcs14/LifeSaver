@@ -48,6 +48,20 @@ class UsuController{
     echo json_encode($return);
 }
 
+
+// Correo existente - Registro
+public function validarEmail(){
+  $email[0] = $_POST["email"];
+  $response = $this->model->readUserbyEmail($email);
+  if(count($response[0])>0){
+    $return = array("El correo ya existe",false);
+  }else{
+    $return = array("",true);
+  }
+  echo json_encode($return);
+}
+
+
 //Validar contraseña segun el correo ingresado
   public function userAut(){
     $data[0] = $_POST["email"];
