@@ -22,33 +22,30 @@ $("#txtemail").focus(function(){
 
 // Validar contraseña (numeros, mayusculas, etc.)
 
-$("#verify").focus(function(){
-  var yp = $("#password").val();
-  $.post("crear",{yp:yp},function(data){
-    var data=JSON.parse(data);
-    $("#password").siblings(".pas").after("<span class='error'>"+data[0]+"</span>");
-    if(data[1] == false){
-      $("#btnLogin").attr("disabled",true);
-    }else{
-      $("#btnLogin").attr("disabled",false);
-    }
-  })
-})
-
+$("#password").keyup(function(){
+  var data = $("#password").val();
+  var cant = data.length;
+  if((cant<8)||(cant>16)){
+    $("#btnRegister").attr("disabled",true);
+    $("#password").siblings(".pas").show();
+  }else{
+    $("#password").siblings(".pas").hide();
+    $("#btnRegister").attr("disabled",false);
+  }
+  $("#password").siblings(".pas").after("<span class='error'>La contraseña debe ser mayor de 8 y menor a 16 caracteres</span>").remove();
+});
 // -- Fin -- //
 
-
 //Contraseñas diferentes
-
 $("#verify").keyup(function(){
   var pas = $("#password").val();
   var ver = $("#verify").val();
     if(ver != pas){
       var msn = "Las contraseñas no coinciden";
-      $("#verify").siblings("span").show();
+      $("#verify").siblings(".veri").show();
       $("#btnRegister").attr("disabled",true);
     }else{
-      $("#verify").siblings("span").hide();
+      $("#verify").siblings(".veri").hide();
       $("#btnRegister").attr("disabled",false);
     }
     $("#verify").siblings(".veri").after("<span class='error'>"+msn+"</span>").remove()
