@@ -16,14 +16,12 @@
           <div class="form-group">
             <label class="sr-only">Usuario</label>
             <input type="email" class="r-form-Usuario form-control" name="data[]" id="txtemail" placeholder="Email" required>
-            <label for="txtemail"></label>
           </div>
           <div class="form-group">
             <label class="sr-only">Contraseña</label>
             <input type="password" class="r-form-Contraseña form-control" name="data[]" id="txtpass" placeholder="Contraseña" required>
-            <label for="txtpass"></label>
           </div>
-          <button type="submit" name="button" id="btnLogin" class="btn btn-primary" style="margin: 15px;">INICIAR SESION</button>
+          <button type="submit" name="button" id="btnLogin" class="btn btn-primary" >INICIAR SESION</button>
         </form>
         <a href="recover">¿Olvidaste tu contraseña?</a><br>
         <div class="form-group">

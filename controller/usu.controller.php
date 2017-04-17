@@ -29,7 +29,7 @@ class UsuController{
 
       $result=$this->model->create($data);
 
-      $res=("",true);
+      // $res=("",true);
       echo $result;
     // }
     // echo json_encode($res);
