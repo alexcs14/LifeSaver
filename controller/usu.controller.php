@@ -13,9 +13,9 @@ class UsuController{
 // Crear cuenta
   public function create(){
     // Validar contraseña con expresiones regulares
-    if((strlen($data[5]<8)) || strlen($data[5]>16)){
-      $res=("La contraseña debe tener entre 8 y 16 caracteres",false);
-    }else{
+    // if((strlen($data[5])<8) || strlen($data[5])>16){
+      // $res=("La contraseña debe tener entre 8 y 16 caracteres",false);
+    // }else{
 
       //Crear usuario
       $data=$_POST["data"];
@@ -29,10 +29,10 @@ class UsuController{
 
       $result=$this->model->create($data);
 
-      $res=("",true);
-      // echo $result;
-    }
-    echo json_encode($res);
+      // $res=("",true);
+      echo $result;
+    // }
+    // echo json_encode($res);
   }
 
 
@@ -47,6 +47,20 @@ class UsuController{
     }
     echo json_encode($return);
 }
+
+
+// Correo existente - Registro
+public function validarEmail(){
+  $email[0] = $_POST["email"];
+  $response = $this->model->readUserbyEmail($email);
+  if(count($response[0])>0){
+    $return = array("El correo ya existe",false);
+  }else{
+    $return = array("",true);
+  }
+  echo json_encode($return);
+}
+
 
 //Validar contraseña segun el correo ingresado
   public function userAut(){

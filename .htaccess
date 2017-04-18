@@ -10,3 +10,4 @@ RewriteRule ^validacion$     index.php?c=usu&a=userAut
 RewriteRule ^CerrarSesion$   ?c=usu&a=logout
 RewriteRule ^send$           ?c=email&a=send
 RewriteRule ^recover$        ?c=main&a=recoverPass
+RewriteRule ^valCorreo$      ?c=usu&a=validarEmail
