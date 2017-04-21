@@ -14,13 +14,18 @@ $("#txtpass").focus(function(){
       })
 });
 
+// Usuario Inactivo
+
+
+// -- Fin -- //
+
 //Correo existente - Registro
 
-$("#password").keyup(function(){
+$("#password").focus(function(){
   var email = $("#emailRegis").val();
   $.post("valCorreo",{email:email},function(data){
     var data = JSON.parse(data);
-    // alert(data[0]);
+    $("#emailRegis").after("<span class='error'>"+data[0]+"</span>");
     if(data[1] == false){
       $("btnRegister").attr("disabled",true);
     }else{

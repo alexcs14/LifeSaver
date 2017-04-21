@@ -32,7 +32,7 @@ class UsuController{
       // $res=("",true);
       echo $result;
     // }
-    // echo json_encode($res);
+    echo json_encode($result);
   }
 
 
