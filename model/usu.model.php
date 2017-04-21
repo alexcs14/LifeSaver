@@ -42,7 +42,7 @@ class UsuModel{
 
   public function readUserbyEmail($data){
     try{
-        $sql="SELECT usuario.usu_cod,usu_nom,usu_ape,acc_pass,acc_token FROM usuario INNER JOIN acceso ON acceso.usu_cod = usuario.usu_cod WHERE usu_email = ?";
+        $sql="SELECT usuario.usu_cod,usu_nom,usu_ape,acc_pass,acc_token,acc_est FROM usuario INNER JOIN acceso ON acceso.usu_cod = usuario.usu_cod WHERE usu_email = ?";
         $query = $this->pdo->prepare($sql);
         $query -> execute(array($data[0]));
         $result = $query->fetch(PDO::FETCH_BOTH);

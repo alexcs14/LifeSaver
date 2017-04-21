@@ -42,6 +42,8 @@ class UsuController{
     $response = $this->model->readUserbyEmail($email);
     if(count($response[0])<=0){
       $return = array("El correo no existe",false);
+    // }else if(){
+    //   $return = array("Usuario inactivo",false)
     }else{
       $return = array("",true);
     }
