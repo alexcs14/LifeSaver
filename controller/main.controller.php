@@ -26,7 +26,7 @@ class MainController{
   }
   public function recoverPass(){
     require_once 'views/include/header.php';
-    require_once 'views/module/sendEmail.php';
+    require_once 'views/module/usu/recuperar.php';
     require_once 'views/include/footer.php';
   }
 }
