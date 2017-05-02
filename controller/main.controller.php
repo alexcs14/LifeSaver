@@ -29,7 +29,7 @@ class MainController{
     require_once 'views/module/usu/recuperar.php';
     require_once 'views/include/footer.php';
   }
-  public function ggg()
+  public function usuPerfil()
   {
     require_once 'views/include/header.php';
     require_once 'views/module/usu/perfil.php';

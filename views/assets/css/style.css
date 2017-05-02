@@ -181,18 +181,18 @@ footer a:hover, footer a:focus {
 
 }
 
-/**************************************ESTILOS PANTALLA PERFIL****************************************************/
-.square, .btn {
+/**************************************ESTILOS PANTALLA PERFIL**************************************************/
+.square{
     border-radius: 0px!important;
 }
 
 /* -- Color de las Clases -- */
 .coralbg {
-    background-color: #FA396F;
+	background: trasparent;
 }
 
 .coral {
-    color: #FA396f;
+    color: #FB3A3D;
 }
 
 .turqbg {
@@ -207,10 +207,18 @@ footer a:hover, footer a:focus {
     color: #fff!important;
 }
 
+.t1{
+	color: #00B5AF;
+}
+
+.t2{
+	color: white;
+}
+
 /* -- COntenedor del menú de opciones de usuario-- */
 div.user-menu-container {
   z-index: 10;
-  background-color: #fff;
+  background-color: rgba(0,0,0,0.9);
   margin-top: 20px;
   background-clip: padding-box;
   opacity: 0.97;
@@ -242,26 +250,39 @@ div.user-menu-container .thumbnail {
 }
 
 /* -- Botones Verticales -- */
+
 div.user-menu-container .btn-group-vertical {
     display: block;
 }
 
 div.user-menu-container .btn-group-vertical>a {
     padding: 20px 25px;
-    background-color: #46D8D2;
+    background:rgba(0,181,175,0.5);
+		border-color: transparent;
     color: white;
-    border-color: #fff;
+		border-radius: 0;
 }
 
 div.btn-group-vertical>a:hover {
     color: white;
-    border-color: white;
+		background: #00CD1B;
 }
 
 div.btn-group-vertical>a.active {
-    background: #FA396F;
+    background: #00CD1B;
     box-shadow: none;
     color: white;
+}
+
+div.btn-group-vertical>a.active:hover{
+		background: #00CD1B;
+		color: white;
+}
+
+div.btn-group-vertical>a.active:focus{
+	background: #00CD1B;
+	color: white;
+
 }
 /* -- Estilos botnes verticlaes -- */
 div.user-menu-btns {
@@ -279,7 +300,7 @@ div.user-menu-btns div.btn-group-vertical>a.active:after{
   border-left: 0;
   border-bottom: 13px solid transparent;
   border-top: 13px solid transparent;
-  border-left: 10px solid #46D8D2;
+  border-left: 10px solid #00CD1B;
 }
 /* -- Tabla principal-- */
 div.user-menu-content {
@@ -303,7 +324,13 @@ div.user-menu div.user-menu-content:not(.active){
 }
 
 /* -- The btn stylings for the btn icons -- */
-.btn-label {position: relative;left: -12px;display: inline-block;padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
+.btn-label {
+	position: relative;
+	line-height: 0;
+	left: -12px;display: inline-block;
+	padding: 0px;
+	background: linear-gradient(135deg, rgba(0,71,73,1) 0%, rgba(179,255,0,1) 100%);
+	border-radius: 50px;}
 .btn-labeled {padding-top: 0;padding-bottom: 0;}
 
 /* -- Custom classes for the snippet, won't effect any existing bootstrap classes of your site, but can be reused. -- */
@@ -312,20 +339,15 @@ div.user-menu div.user-menu-content:not(.active){
     padding: 20px 25px;
 }
 
-.no-pad {
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 0;
-}
 
 .user-details {
-    background: #eee;
     min-height: 333px;
 }
 
 .user-image {
-  max-height:200px;
+  max-height:180px;
   overflow:hidden;
+
 }
 
 .overview h3 {
@@ -355,7 +377,7 @@ div.user-menu div.user-menu-content:not(.active){
     position:absolute;
     top:0;
     right:0;
-    background: rgba(70, 216, 210, 0.44);
+    background: rgba(0, 0, 0, 0.7);
     width:100%;
     height:100%;
     padding:2%;
@@ -390,12 +412,12 @@ div.user-menu div.user-menu-content:not(.active){
 }
 
 .share-links {
-    border: 1px solid #eee;
     padding: 15px;
     margin-top: 15px;
 }
 
-.square, .btn {
+.square
+ {
     border-radius: 0px!important;
 }
 
