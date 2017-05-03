@@ -54,15 +54,16 @@ button.btn {
     margin: 0;
     padding: 0 40px;
     vertical-align: middle;
-    background: linear-gradient(135deg, rgba(0,71,73,1) 0%, rgba(179,255,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004749', endColorstr='#b3ff00', GradientType=1 );    border: 0;
-    opacity: 0.6;
+		border-radius: 50px;
+		background:none;
+    border: 1px solid ;
+		border-color: #00E016;
     font-family: 'lato', sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 44px;
-    color: #fff;
-    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 3px;
+    color:#00E016;;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 50px;
     text-shadow: none;
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
@@ -71,7 +72,8 @@ button.btn {
 button.btn:hover {
     background: linear-gradient(135deg, rgba(0,71,73,1) 0%, rgba(179,255,0,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004749', endColorstr='#b3ff00', GradientType=1 );
-    border: 0;
+		border: 1px solid ;
+		border-color: transparent;
     color: #fff;
     opacity: 1;
 }
