@@ -13,6 +13,7 @@
   <label for="password" class="pas"></label>
   <h3>Verificar contraseña</h3><input type="password" name="ver" placeholder="Repetir contraseña" id="verify" required>
   <label for="verify" class="veri"></label>
+  <h3>Fecha de nacimiento</h3><input type="date" name="data[]">
   <h3>Sexo</h3>
   <input type="radio" name="data[]" value="1" required>Hombre
   <input type="radio" name="data[]" value="2" required>Mujer

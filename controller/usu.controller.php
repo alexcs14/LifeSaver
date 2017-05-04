@@ -20,17 +20,18 @@ class UsuController{
       //Crear usuario
       $data=$_POST["data"];
       $ver=$_POST["ver"];
-      $data[8] = "USUARIO-".date('Ymd')."-".date('hms');
-      $data[7] = 1;
+      $data[9] = "USUARIO-".date('Ymd')."-".date('hms');
+      $data[8] = 1;
       $data[5] = password_hash($data[5],PASSWORD_DEFAULT);
-      $data[9] = randCod(50);
-      $data[11] = "Inactivo";
-      $data[10] = 0;
+      $data[10] = randCod(50);
+      $data[12] = "Inactivo";
+      $data[11] = 0;
 
       $result=$this->model->create($data);
 
       // $res=("",true);
-      echo $result;
+      header("location: login");
+      echo "<script> alert($result) </script>";
     // }
     echo json_encode($result);
   }

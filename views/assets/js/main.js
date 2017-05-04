@@ -95,6 +95,9 @@ $("#frmLogin").submit(function(e){
     }
 });
 // -- Fin -- //
+$("#frmRegister").submit(function(){
+  alert("Usuario registrado con exito");
+})
 
 
 // Correo existente, Registro
