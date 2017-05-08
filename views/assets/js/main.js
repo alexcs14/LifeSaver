@@ -14,8 +14,31 @@ $("#txtpass").focus(function(){
       })
 });
 
+$("#txtemail").focus(function(){
+  $(this).siblings("span").remove();
+});
 // Usuario Inactivo
 
+
+// -- Fin -- //
+
+// Cuenta activada
+
+// $("#crea").submit(function(){
+//   $.post("crear",function(data){
+//     var data = JSON.parse(data);
+//     alert("El usuario ha sido registrado con exito, hemos enviado un mensaje a "+data+" para verificar su cuenta");
+//     document.location.href="login";
+//   })
+// });
+
+$("#crea").submit(function(){
+  $.post("crear",function(data){
+    if(data == true){
+      alert("El usuario ha sido creado con exito, hemos enviado un mensaje a "+email+" para verificar la cuenta");
+    }
+  })
+})
 
 // -- Fin -- //
 
@@ -25,10 +48,12 @@ $("#password").focus(function(){
   var email = $("#emailRegis").val();
   $.post("valCorreo",{email:email},function(data){
     var data = JSON.parse(data);
-    $("#emailRegis").after("<span class='error'>"+data[0]+"</span>");
+    $("#emailRegis").after("<span class='exis'>"+data[0]+"</span>");
     if(data[1] == false){
+      $("span.exis").show();
       $("btnRegister").attr("disabled",true);
     }else{
+      $("span.exis").hide();
       $("btnRegister").attr("disabled",false);
     }
   })
@@ -36,9 +61,6 @@ $("#password").focus(function(){
 
 // -- Fin -- //
 
-$("#txtemail").focus(function(){
-  $(this).siblings("span").remove();
-});
 // -- Fin -- //
 
 

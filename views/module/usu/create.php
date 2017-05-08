@@ -1,4 +1,4 @@
-<form action="crear" method="post" data-parsley-validate>
+<form id ="crea" action="crear" method="post" data-parsley-validate>
   <h3>Nombres</h3><input type="text" name="data[]" placeholder="Ingrese su nombre" required>
   <h3>Apellidos</h3><input type="text" name="data[]" placeholder="Ingrese sus apellidos" required>
   <h3>Tipo documento </h3>

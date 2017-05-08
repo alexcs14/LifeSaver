@@ -1,5 +1,7 @@
 <?php
 include "model/conn.model.php";
+require_once('PHPMailer/PHPMailerAutoload.php');
+
 
 class UsuModel{
 
@@ -20,7 +22,7 @@ class UsuModel{
 
   public function create($data){
     try {
-      $sql="INSERT INTO usuario (usu_cod,rol_cod,usu_nom,usu_ape,tipo_docu,usu_documento,usu_email,usu_sex,usu_fechna) VALUES(?,?,?,?,?,?,?,?,?)";
+      $sql="INSERT INTO usuario (usu_cod,rol_cod,usu_nom,usu_ape,tipo_docu,usu_documento,usu_email,usu_fechna,usu_sex) VALUES(?,?,?,?,?,?,?,?,?,?)";
       $query=$this->pdo->prepare($sql);
       $query->execute(array($data[9],$data[8],$data[0],$data[1],$data[2],$data[3],$data[4],$data[6],$data[7]));
 
@@ -28,16 +30,16 @@ class UsuModel{
       $query=$this->pdo->prepare($sql);
       $query->execute(array($data[10],$data[8],$data[5],$data[11],$data[12]));
 
-      $msn= "Usuario guardado con exito";
+      $msn= "login";
     } catch (PDOException $e) {
       $cod = $e->getCode();
       $file = $e->getFile();
       $line = $e->getLine();
       $text = $e->getMessage();
       DataBase::errorLog($cod,$file,$line,$text);
-      $msn="Ha ocurrido un error";
+      $msn="error";
     }
-    return $msn;
+  return $msn;
   }
 
   public function readUserbyEmail($data){
@@ -54,6 +56,34 @@ class UsuModel{
       DataBase::errorLog($cod,$file,$line,$text);
     }
       return $result;
+  }
+
+  public function mail($correo){
+    $email = new PHPMailer;
+    $email->isSMTP();
+    $email->Host = 'smtp.gmail.com';
+    $email->SMTPSecure = 'tls';
+    $email->Port = 587;
+    $email->SMTPAuth = true;
+
+    $email->Username = 'alexandercos14@gmail.com';
+    $email->Password = 'jhony321123';
+
+
+    $email->addReplyTo('alexandercos14@gmail.com');
+    $email->setFrom('alexandercos14@gmail.com');
+    $email->addAddress($correo,"El gris");
+    $email->Subject = 'Esto es un buen asunto 7u7';
+    $email->AltBody = 'Ps no se aun pa que es esto';
+    $email->msgHTML("<strong>Veamos el truco</strong>
+
+    <strong>HAMBURGUESAS!!!</strong>");
+
+    if (!$email->send()) {
+        echo "Error: ".$email->ErrorInfo;
+    } else {
+        echo "Mensaje enviado";
+    }
   }
 
   public function __DESTRUCT(){

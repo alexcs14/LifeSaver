@@ -12,12 +12,7 @@ class UsuController{
 
 // Crear cuenta
   public function create(){
-    // Validar contraseña con expresiones regulares
-    // if((strlen($data[5])<8) || strlen($data[5])>16){
-      // $res=("La contraseña debe tener entre 8 y 16 caracteres",false);
-    // }else{
 
-      //Crear usuario
       $data=$_POST["data"];
       $ver=$_POST["ver"];
       $data[9] = "USUARIO-".date('Ymd')."-".date('hms');
@@ -28,12 +23,12 @@ class UsuController{
       $data[11] = 0;
 
       $result=$this->model->create($data);
+      if((rowcount($data[9])) > 0){
+        $valor = true;
+        echo json_encode($valor);
+      }
+      header("location: $result");
 
-      // $res=("",true);
-      header("location: login");
-      echo "<script> alert($result) </script>";
-    // }
-    echo json_encode($result);
   }
 
 
@@ -85,6 +80,12 @@ public function validarEmail(){
     }
     echo json_encode($return);
   }
+
+public function recover(){
+  $correo = $_POST["email"];
+  $result = $this->model->recover($correo);
+  header("location: login");
+}
 
 
   public function logout(){

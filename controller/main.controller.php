@@ -7,6 +7,12 @@ class MainController{
     require_once 'views/include/footer.php';
   }
 
+  public function error(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/error.php';
+    require_once 'views/include/footer.php';
+  }
+
   public function viewCreate(){
     require_once 'views/include/header.php';
     require_once 'views/module/usu/create.php';
