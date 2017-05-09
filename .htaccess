@@ -3,11 +3,12 @@ RewriteEngine on
 RewriteRule ^inicio$         ?c=main&a=inicio
 RewriteRule ^registro$       ?c=main&a=viewCreate
 RewriteRule ^login$          ?c=main&a=index
+RewriteRule ^error$          ?c=main&a=error
 
 RewriteRule ^crear$          ?c=usu&a=create
 RewriteRule ^acceso/validar$ ?c=usu&a=validar
 RewriteRule ^validacion$     index.php?c=usu&a=userAut
 RewriteRule ^CerrarSesion$   ?c=usu&a=logout
-RewriteRule ^send$           ?c=email&a=send
 RewriteRule ^recover$        ?c=main&a=recoverPass
 RewriteRule ^valCorreo$      ?c=usu&a=validarEmail
+RewriteRule ^recover/email$  ?c=usu&a=recover

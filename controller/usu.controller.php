@@ -12,27 +12,25 @@ class UsuController{
 
 // Crear cuenta
   public function create(){
-    // Validar contraseña con expresiones regulares
-    // if((strlen($data[5])<8) || strlen($data[5])>16){
-      // $res=("La contraseña debe tener entre 8 y 16 caracteres",false);
-    // }else{
 
-      //Crear usuario
       $data=$_POST["data"];
       $ver=$_POST["ver"];
-      $data[8] = "USUARIO-".date('Ymd')."-".date('hms');
-      $data[7] = 1;
+      $data[9] = "USUARIO-".date('Ymd')."-".date('hms');
+      $data[8] = 1;
       $data[5] = password_hash($data[5],PASSWORD_DEFAULT);
-      $data[9] = randCod(50);
-      $data[11] = "Inactivo";
-      $data[10] = 0;
+      $data[10] = randCod(50);
+      $data[12] = "Inactivo";
+      $data[11] = 0;
 
       $result=$this->model->create($data);
+      // if((rowcount($data[9])) > 0){
+        // $valor = true;
+        // echo json_encode($valor);
+      // }
 
-      // $res=("",true);
       echo $result;
-    // }
-    echo json_encode($result);
+      header("location: $result");
+
   }
 
 
@@ -42,14 +40,16 @@ class UsuController{
     $response = $this->model->readUserbyEmail($email);
     if(count($response[0])<=0){
       $return = array("El correo no existe",false);
-    // }else if(){
-    //   $return = array("Usuario inactivo",false)
     }else{
-      $return = array("",true);
-    }
-    echo json_encode($return);
+      if($response["acc_est"] != "activo"){
+        $estado = $response["acc_est"];
+        $return = array("El usuario esta $estado",false);
+      }else{
+        $return = array("",true);
+      }
+  }
+  echo json_encode($return);
 }
-
 
 // Correo existente - Registro
 public function validarEmail(){
@@ -84,6 +84,12 @@ public function validarEmail(){
     }
     echo json_encode($return);
   }
+
+public function recover(){
+  $correo = $_POST["email"];
+  $result = $this->model->mail($correo);
+  header("location: ../login");
+}
 
 
   public function logout(){

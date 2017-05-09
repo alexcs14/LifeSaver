@@ -1,4 +1,4 @@
-<form action="crear" method="post" data-parsley-validate>
+<form id ="crea" action="crear" method="post" data-parsley-validate>
   <h3>Nombres</h3><input type="text" name="data[]" placeholder="Ingrese su nombre" required>
   <h3>Apellidos</h3><input type="text" name="data[]" placeholder="Ingrese sus apellidos" required>
   <h3>Tipo documento </h3>
@@ -13,6 +13,7 @@
   <label for="password" class="pas"></label>
   <h3>Verificar contraseña</h3><input type="password" name="ver" placeholder="Repetir contraseña" id="verify" required>
   <label for="verify" class="veri"></label>
+  <h3>Fecha de nacimiento</h3><input type="date" name="data[]">
   <h3>Sexo</h3>
   <input type="radio" name="data[]" value="1" required>Hombre
   <input type="radio" name="data[]" value="2" required>Mujer

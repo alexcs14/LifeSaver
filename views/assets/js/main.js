@@ -5,8 +5,8 @@ $("#txtpass").focus(function(){
   var email = $("#txtemail").val();
   $.post("acceso/validar",{email:email},function(data){
           var data = JSON.parse(data);
-          $("#txtemail").siblings("label").after("<span class='error'>"+data[0]+"</span>");
           if(data[1] == false){
+            $("#txtemail").siblings("label").after("<span class='error'>"+data[0]+"</span>");
             $("#btnLogin").attr("disabled",true);
           }else{
             $("#btnLogin").attr("disabled",false);
@@ -14,8 +14,29 @@ $("#txtpass").focus(function(){
       })
 });
 
-// Usuario Inactivo
 
+
+$("#txtemail").focus(function(){
+  $(this).siblings("span").remove();
+});
+
+// $("#txtemail").keyup(function(){
+//   var valor = $("#txtemail").val();
+//   alert("Campo: "+valor);
+//   $("#txtpass").focus(function(){
+//     alert("final"+valor);
+//   })
+// });
+
+//Usuario creado con exito
+
+$("#crea").submit(function(){
+  $.post("crear",function(data){
+    if(data == true){
+      alert("El usuario ha sido creado con exito, hemos enviado un mensaje a "+email+" para verificar la cuenta");
+    }
+  })
+})
 
 // -- Fin -- //
 
@@ -25,10 +46,12 @@ $("#password").focus(function(){
   var email = $("#emailRegis").val();
   $.post("valCorreo",{email:email},function(data){
     var data = JSON.parse(data);
-    $("#emailRegis").after("<span class='error'>"+data[0]+"</span>");
+    $("#emailRegis").after("<span class='exis'>"+data[0]+"</span>");
     if(data[1] == false){
+      $("span.exis").show();
       $("btnRegister").attr("disabled",true);
     }else{
+      $("span.exis").hide();
       $("btnRegister").attr("disabled",false);
     }
   })
@@ -36,9 +59,6 @@ $("#password").focus(function(){
 
 // -- Fin -- //
 
-$("#txtemail").focus(function(){
-  $(this).siblings("span").remove();
-});
 // -- Fin -- //
 
 
@@ -95,6 +115,9 @@ $("#frmLogin").submit(function(e){
     }
 });
 // -- Fin -- //
+$("#frmRegister").submit(function(){
+  alert("Usuario registrado con exito");
+})
 
 
 // Correo existente, Registro
