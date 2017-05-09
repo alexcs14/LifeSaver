@@ -28,7 +28,7 @@ class UsuModel{
 
       $sql="INSERT INTO acceso VALUES(?,?,?,?,?)";
       $query=$this->pdo->prepare($sql);
-      $query->execute(array($data[10],$data[8],$data[5],$data[11],$data[12]));
+      $query->execute(array($data[10],$data[9],$data[5],$data[11],$data[12]));
 
       $msn= "login";
     } catch (PDOException $e) {
@@ -72,7 +72,7 @@ class UsuModel{
 
     $email->addReplyTo('alexandercos14@gmail.com');
     $email->setFrom('alexandercos14@gmail.com');
-    $email->addAddress($correo,"El gris");
+    $email->addAddress("kyon.1498@gmail.com","El gris");
     $email->Subject = 'Esto es un buen asunto 7u7';
     $email->AltBody = 'Ps no se aun pa que es esto';
     $email->msgHTML("<strong>Veamos el truco</strong>

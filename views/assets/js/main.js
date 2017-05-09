@@ -5,8 +5,8 @@ $("#txtpass").focus(function(){
   var email = $("#txtemail").val();
   $.post("acceso/validar",{email:email},function(data){
           var data = JSON.parse(data);
-          $("#txtemail").siblings("label").after("<span class='error'>"+data[0]+"</span>");
           if(data[1] == false){
+            $("#txtemail").siblings("label").after("<span class='error'>"+data[0]+"</span>");
             $("#btnLogin").attr("disabled",true);
           }else{
             $("#btnLogin").attr("disabled",false);
@@ -14,10 +14,19 @@ $("#txtpass").focus(function(){
       })
 });
 
+
+
 $("#txtemail").focus(function(){
   $(this).siblings("span").remove();
 });
 
+// $("#txtemail").keyup(function(){
+//   var valor = $("#txtemail").val();
+//   alert("Campo: "+valor);
+//   $("#txtpass").focus(function(){
+//     alert("final"+valor);
+//   })
+// });
 
 //Usuario creado con exito
 
