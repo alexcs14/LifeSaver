@@ -23,10 +23,12 @@ class UsuController{
       $data[11] = 0;
 
       $result=$this->model->create($data);
-      if((rowcount($data[9])) > 0){
-        $valor = true;
-        echo json_encode($valor);
-      }
+      // if((rowcount($data[9])) > 0){
+        // $valor = true;
+        // echo json_encode($valor);
+      // }
+
+      echo $result;
       header("location: $result");
 
   }
@@ -36,16 +38,19 @@ class UsuController{
   public function validar(){
     $email[0] = $_POST["email"];
     $response = $this->model->readUserbyEmail($email);
+    $return = array('',false);
     if(count($response[0])<=0){
       $return = array("El correo no existe",false);
-    // }else if(){
-    //   $return = array("Usuario inactivo",false)
     }else{
-      $return = array("",true);
-    }
-    echo json_encode($return);
+      if($response["acc_est"] != "activo"){
+        $estado = $response["acc_est"];
+        $return = array("El usuario esta $estado",false);
+      }else{
+        $return = array("",true);
+      }
+  }
+  echo json_encode($return);
 }
-
 
 // Correo existente - Registro
 public function validarEmail(){

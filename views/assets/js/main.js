@@ -17,20 +17,9 @@ $("#txtpass").focus(function(){
 $("#txtemail").focus(function(){
   $(this).siblings("span").remove();
 });
-// Usuario Inactivo
 
 
-// -- Fin -- //
-
-// Cuenta activada
-
-// $("#crea").submit(function(){
-//   $.post("crear",function(data){
-//     var data = JSON.parse(data);
-//     alert("El usuario ha sido registrado con exito, hemos enviado un mensaje a "+data+" para verificar su cuenta");
-//     document.location.href="login";
-//   })
-// });
+//Usuario creado con exito
 
 $("#crea").submit(function(){
   $.post("crear",function(data){

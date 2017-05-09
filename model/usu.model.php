@@ -1,6 +1,6 @@
 <?php
 include "model/conn.model.php";
-require_once('PHPMailer/PHPMailerAutoload.php');
+require_once('library/PHPMailer/PHPMailerAutoload.php');
 
 
 class UsuModel{
@@ -22,7 +22,7 @@ class UsuModel{
 
   public function create($data){
     try {
-      $sql="INSERT INTO usuario (usu_cod,rol_cod,usu_nom,usu_ape,tipo_docu,usu_documento,usu_email,usu_fechna,usu_sex) VALUES(?,?,?,?,?,?,?,?,?,?)";
+      $sql="INSERT INTO usuario (usu_cod,rol_cod,usu_nom,usu_ape,tipo_docu,usu_documento,usu_email,usu_fechna,usu_sex) VALUES(?,?,?,?,?,?,?,?,?)";
       $query=$this->pdo->prepare($sql);
       $query->execute(array($data[9],$data[8],$data[0],$data[1],$data[2],$data[3],$data[4],$data[6],$data[7]));
 
