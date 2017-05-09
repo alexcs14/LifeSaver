@@ -70,14 +70,20 @@ class UsuModel{
     $email->Password = 'jhony321123';
 
 
-    $email->addReplyTo('alexandercos14@gmail.com');
-    $email->setFrom('alexandercos14@gmail.com');
-    $email->addAddress("kyon.1498@gmail.com","El gris");
-    $email->Subject = 'Esto es un buen asunto 7u7';
-    $email->AltBody = 'Ps no se aun pa que es esto';
-    $email->msgHTML("<strong>Veamos el truco</strong>
+    $email->setFrom('alexandercos14@gmail.com','El Gris');
+    $email->addAddress($correo);
+    $email->Subject = '¡¡¡FELICIDAD!!!';
+    $email->AltBody = 'Sigo sin saber pa que sirve esto...';
+    $email->msgHTML("<strong>MUY BUENAS</strong>
+    <p>Bueno Esteban, creo que con esto damos por concluido este dolor de cabeza que fue 'phpMailer' jajaja, aunque aun faltan cositas</p>
+    </br>
+    <h1>SI, AUN ESTOY JUGANDO A VER COMO FUNCIONA ESTO XD POR ESO EL MENSAJE</H1></br>
+    <h2>Mas pequeño</h2></br>
+    <h3>y más</h3></br>
+    <h4>y aun más</h4></br>
 
-    <strong>HAMBURGUESAS!!!</strong>");
+    <p>mejor lo dejo hasta acá jajaja </p>
+    ");
 
     if (!$email->send()) {
         echo "Error: ".$email->ErrorInfo;

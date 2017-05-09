@@ -87,8 +87,8 @@ public function validarEmail(){
 
 public function recover(){
   $correo = $_POST["email"];
-  $result = $this->model->recover($correo);
-  header("location: login");
+  $result = $this->model->mail($correo);
+  header("location: ../login");
 }
 
 
