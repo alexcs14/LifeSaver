@@ -66,23 +66,20 @@ class UsuModel{
     $email->Port = 587;
     $email->SMTPAuth = true;
 
-    $email->Username = 'alexandercos14@gmail.com';
-    $email->Password = 'jhony321123';
+    $email->Username = 'lsaverapp@gmail.com';
+    $email->Password = 'life:_:sav3r';
 
 
-    $email->setFrom('alexandercos14@gmail.com','El Gris');
+    $email->setFrom('lsaverapp@gmail.com','LifeSaver');
     $email->addAddress($correo);
-    $email->Subject = '¡¡¡FELICIDAD!!!';
+    $email->Subject = '¡Completar perfil - LifeSaver';
     $email->AltBody = 'Sigo sin saber pa que sirve esto...';
-    $email->msgHTML("<strong>MUY BUENAS</strong>
-    <p>Bueno Esteban, creo que con esto damos por concluido este dolor de cabeza que fue 'phpMailer' jajaja, aunque aun faltan cositas</p>
-    </br>
-    <h1>SI, AUN ESTOY JUGANDO A VER COMO FUNCIONA ESTO XD POR ESO EL MENSAJE</H1></br>
-    <h2>Mas pequeño</h2></br>
-    <h3>y más</h3></br>
-    <h4>y aun más</h4></br>
-
-    <p>mejor lo dejo hasta acá jajaja </p>
+    $email->msgHTML("
+    <form action='http://localhost/LifeSaver/login'>
+    <h1>RECUPERAR CONTRASEÑA</h1></br>
+    <p>Clic en el boton para recuperar contraseña: </p></br>
+    <button type='submit'>Recuperar contraseña</button>
+    </form>
     ");
 
     if (!$email->send()) {
