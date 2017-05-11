@@ -117,15 +117,31 @@ $("#frmLogin").submit(function(e){
 // -- Fin -- //
 $("#frmRegister").submit(function(){
   alert("Usuario registrado con exito");
+});
+
+//Recuperar contraseña - email
+
+// $("#btnRecover").mouseenter(function(){
+//   $.post("emailreco",function(data){
+//     var ver = JSON.parse(data);
+//     if(ver[1] == false){
+//       alert(data[0]);
+//       $("#btnRecover").attr("disabled",true);
+//     }else{
+//       $("#btnRecover").attr("disabled",false)
+//     }
+//   })
+// })
+
+//email
+$("#docu").focus(function(){
+  $.post("verifyemail",function(data){
+    var verify = JSON.parse(data);
+    alert(data);
+  })
 })
 
-
-// Correo existente, Registro
-
-
-
-// -- Fin -- //
-
+// -- fin -- //
 
 
 //-------------------------------------------------PERFIL------------------------------------------//

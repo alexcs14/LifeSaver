@@ -12,3 +12,4 @@ RewriteRule ^CerrarSesion$   ?c=usu&a=logout
 RewriteRule ^recover$        ?c=main&a=recoverPass
 RewriteRule ^valCorreo$      ?c=usu&a=validarEmail
 RewriteRule ^recover/email$  ?c=usu&a=recover
+RewriteRule ^verifyemail$    ?c=usu&a=emailreco

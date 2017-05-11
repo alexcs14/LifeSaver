@@ -85,12 +85,37 @@ public function validarEmail(){
     echo json_encode($return);
   }
 
+//Recuperar contraseña {
+
+// --> Recuperar
 public function recover(){
   $correo = $_POST["email"];
   $result = $this->model->mail($correo);
   header("location: ../login");
 }
 
+// --> Verificar email
+public function emailreco(){
+  $email = $_POST["email"];
+  // $data = $this->model->readUserbyEmail($email);
+  $return = array($email);
+  // if(count($data[0])<=0){
+  //   $result = array("El correo no existe",false);
+  // }else{
+  //   $documento = $_POST["documento"];
+  //   if($documento == $data["usu_documento"]){
+  //     $result = array("El documento no corresponde a este usuario",false);
+  //   }else{
+  //     $result = array("",true);
+  //   }
+  // }
+  echo json_encode($return);
+}
+
+
+
+
+//}
 
   public function logout(){
     session_destroy();
