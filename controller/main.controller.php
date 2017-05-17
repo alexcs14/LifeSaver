@@ -41,5 +41,12 @@ class MainController{
     require_once 'views/module/usu/perfil.php';
     require_once 'views/include/footer.php';
   }
+
+  public function newpass(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu/newpass.php';
+    require_once 'views/include/footer.php';
+  }
+
 }
 ?>

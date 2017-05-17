@@ -89,30 +89,46 @@ public function validarEmail(){
 
 // --> Recuperar
 public function recover(){
-  $correo = $_POST["email"];
-  $result = $this->model->mail($correo);
-  header("location: ../login");
+  $correo[0] = $_POST["email"];
+  // $documento = $_POST["documento"];
+  $result = $this->model->readUserbyEmail($correo);
+  if(count($result[0])<=0){
+    $return = array("El correo no existe",false);
+  }else{
+    // if($result["usu_documento"] != $documento){
+    //   $return = array("El correo no conincide con la cuenta",false);
+    // }else{
+      $return = array("",true);
+      // $enviar = $this->model->mail($correo);
+      // header("location: ../login");
+    // }
+  }
+  echo json_encode($return);
 }
 
-// --> Verificar email
-public function emailreco(){
+public function enviar_email(){
+  $email=$_POST["email"];
+  $result = $this->model->mail($email);
+  echo json_encode($result);
+}
+
+public function verificar_email(){
   $email = $_POST["email"];
-  // $data = $this->model->readUserbyEmail($email);
-  $return = array($email);
-  // if(count($data[0])<=0){
-  //   $result = array("El correo no existe",false);
-  // }else{
-  //   $documento = $_POST["documento"];
-  //   if($documento == $data["usu_documento"]){
-  //     $result = array("El documento no corresponde a este usuario",false);
-  //   }else{
-  //     $result = array("",true);
-  //   }
-  // }
+  $result = $this->model->readUserbyEmail($email);
+  if(count($result[0])<=0){
+    $return = array("El correo no existe",false);
+  }else{
+    $return = array("",true);
+  }
   echo json_encode($return);
 }
 
 
+public function cambio(){
+  $data = $_POST["data"];
+  $result = $this->model->new_pass($data);
+  echo $result;
+}
 
 
 //}

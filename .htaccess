@@ -7,9 +7,11 @@ RewriteRule ^error$          ?c=main&a=error
 
 RewriteRule ^crear$          ?c=usu&a=create
 RewriteRule ^acceso/validar$ ?c=usu&a=validar
-RewriteRule ^validacion$     index.php?c=usu&a=userAut
+RewriteRule ^validacion$     ?c=usu&a=userAut
 RewriteRule ^CerrarSesion$   ?c=usu&a=logout
 RewriteRule ^recover$        ?c=main&a=recoverPass
 RewriteRule ^valCorreo$      ?c=usu&a=validarEmail
 RewriteRule ^recover/email$  ?c=usu&a=recover
-RewriteRule ^verifyemail$    ?c=usu&a=emailreco
+RewriteRule ^newpass$        ?c=main&a=newpass
+RewriteRule ^change$         ?c=usu&a=verificar_email
+RewriteRule ^enviar$         ?c=usu&a=enviar_email
