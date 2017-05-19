@@ -105,7 +105,6 @@ img { max-width: 100%; }
 	padding: 60px 0 80px 0;
 	height: 100vh;
 	display: flex;
-	margin-top: -1.9%;
 	justify-content: center;align-items: center;
 	flex-direction: column;
 	background: linear-gradient(to right, rgba(92,179,255,1) 0%, rgba(0,123,255,1) 100%);
@@ -138,6 +137,65 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a54f0', end
 .top-content2 .description a:hover,
 .top-content2 .description a:focus {
 	border: 0;
+}
+
+.top-content3 {
+	padding: 60px 0 80px 0;
+	height: 100vh;
+	display: flex;
+
+	justify-content: center;align-items: center;
+	flex-direction: column;
+	background: linear-gradient(to right, rgba(232,138,75,1) 0%, rgba(227,94,32,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e88a4b', endColorstr='#e35e20', GradientType=1 );
+}
+
+.top-content3 .description a {
+	color: #fff;
+	border-bottom: 1px dotted #fff; }
+.top-content3 .description a:hover,
+.top-content3 .description a:focus {
+	border: 0;
+}
+
+.contenedor-login-seccion1{
+	background-image:  url('../img/name.jpeg');
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	opacity: 1.5;
+}
+
+.contenedor-login-seccion2{
+	background-image:  url('../img/fondo2.jpg');
+	background-size: cover;
+
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	opacity: 1.5;
+}
+
+.contenedor-login-seccion3{
+	background-image:  url('../img/fondo3.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	opacity: 1.5;
+}
+
+.h3-eres{
+	color: white;
 }
 
 .show-forms {
@@ -195,21 +253,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a54f0', end
 }
 
 
-/***** Footer *****/
-.footer1{
-	padding: 30px;
-	color: #fff;
-	background-color: rgba(0,0,0,0.6);
-	width: 100%;
-}
-footer {
-	padding-bottom: 200px;
-	color: #fff;
-	background-color: rgba(0,0,0,0.6);
+footer{
+	background: #252525;
 }
 
 footer .footer-border {
-	width: 200px;
 	margin: 0 auto;
 	padding-bottom: 30px;
 	border-top: 1px solid #fff;
@@ -222,7 +270,7 @@ footer a {
 	border-bottom: 1px dotted #fff;
 }
 footer a:hover, footer a:focus {
-	color: #fff;
+	color: #00AFFF;
 	border: 0;
 }
 
@@ -258,33 +306,6 @@ footer a:hover, footer a:focus {
 
 }
 
-.contenedor-login-seccion1{
-	background-image:  url('../img/name.jpeg');
-	background-size: cover;
-	background-position: center;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	opacity: 1.5;
-}
-
-.contenedor-login-seccion2{
-	background-image:  url('../img/fondo2.jpg');
-	background-size: cover;
-
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	opacity: 1.5;
-}
-
-.h3-eres{
-	color: white;
-}
 
 /**************************************ESTILOS PANTALLA PERFIL**************************************************/
 
@@ -654,6 +675,7 @@ li,ul{
     width: 100%;
     background: #0e1a35;
 }
+
 
 .login-signup {
     display: table-cell;
@@ -1427,145 +1449,240 @@ header {
 }
 }
 
-/*==================================================================================
-=========================================CONTACTO==============================================================*/
 
-.map {
-		min-width: 300px;
-		min-height: 300px;
-		width: 100%;
-		height: 100%;
-}
+/*==============================================================================================================
+=====================================================Pantalla de ERROR========================================*/
 
-.header {
-		background-color: #F5F5F5;
-		color: #36A0FF;
-		height: 70px;
-		font-size: 27px;
-		padding: 10px;
+.top-bar-agile{
+	 width: 62%;
+	 margin:0 auto;
+	 padding:40px 0;
 }
-
-.google-maps {
-		position: relative;
-		padding-bottom: 75%; // This is the aspect ratio
-		height: 0;
-		overflow: hidden;
+.logo-agileits{
+	width:20%;
+	float:left;
 }
-.google-maps iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100% !important;
-		height: 100% !important;
+.logo-agileits img {
+    width: 25%;
 }
-
-.form-style-7{
-    max-width:400px;
-    margin:50px auto;
-    background:#fff;
-    border-radius:2px;
-    padding:20px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+.nav-agileinfo ul li a:hover{
+	color:#71c1ff;
 }
-.form-style-7 h1{
-    display: block;
+.contenedor-principal{
+	background: black;
+}
+.content-w3{
+      background: url(../img/bg.jpg) no-repeat 0px -89px;
+    background-size: cover;
+    width: 62%;
+    margin: 0 auto;
+    min-height: 511px;
+}
+.content-w3 h1 {
+    font-size: 200px;
+    letter-spacing: 5px;
     text-align: center;
-    padding: 0;
-    margin: 0px 0px 20px 0px;
-    color: #5C5C5C;
-    font-size:x-large;
+		padding-top: 10%;
+    font-weight: 700;
+    color: #fff;
+	font-family: 'Ravi Prakash', cursive;
+	text-shadow:9px 9px 3px hsl(206, 15%, 40%);
 }
-.form-style-7 ul{
-    list-style:none;
-    padding:0;
-    margin:0;
+.content-w3 h2{
+	font-size:30px;
+	letter-spacing:3px;
+	text-align:center;
+	color:#fff;
+	margin-top: 20%;
 }
-.form-style-7 li{
-    display: block;
-    padding: 9px;
-    border:1px solid #DDDDDD;
-    margin-bottom: 30px;
-    border-radius: 3px;
-}
-.form-style-7 li:last-child{
-    border:none;
-    margin-bottom: 0px;
-    text-align: center;
-}
-.form-style-7 li > label{
-    display: block;
-    float: left;
-    margin-top: -27px;
-    background: #FFFFFF;
-    padding: 2px 5px 2px 5px;
-    color: #B9B9B9;
-    font-size: 14px;
-    overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.form-style-7 input[type="text"],
-.form-style-7 input[type="date"],
-.form-style-7 input[type="datetime"],
-.form-style-7 input[type="email"],
-.form-style-7 input[type="number"],
-.form-style-7 input[type="search"],
-.form-style-7 input[type="time"],
-.form-style-7 input[type="url"],
-.form-style-7 input[type="password"],
-.form-style-7 textarea,
-.form-style-7 select
-{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    width: 100%;
-    display: block;
-    outline: none;
-    border: none;
-    height: 25px;
-    line-height: 25px;
+.content-w3 p {
+    color: #fff;
     font-size: 16px;
-    padding: 0;
-		color: #000;
-		background-color: rgba(255, 255, 255,0.1);
-}
-.form-style-7 input[type="text"]:focus,
-.form-style-7 input[type="date"]:focus,
-.form-style-7 input[type="datetime"]:focus,
-.form-style-7 input[type="email"]:focus,
-.form-style-7 input[type="number"]:focus,
-.form-style-7 input[type="search"]:focus,
-.form-style-7 input[type="time"]:focus,
-.form-style-7 input[type="url"]:focus,
-.form-style-7 input[type="password"]:focus,
-.form-style-7 textarea:focus,
-.form-style-7 select:focus
-{
-}
-.form-style-7 li > span{
-    background: #F3F3F3;
-    display: block;
-    padding: 3px;
-    margin: 0 -9px -9px -9px;
     text-align: center;
-    color: #C0C0C0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
+    width: 50%;
+    margin: 60px auto 0 auto;
+    line-height: 30px;
 }
-.form-style-7 textarea{
-    resize:none;
+.footer-w3ls p {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+	margin:30px 0px 20px 0;
 }
-.form-style-7 input[type="submit"],
-.form-style-7 input[type="button"]{
-    background: #2471FF;
-    border: none;
-    padding: 10px 20px 10px 20px;
-    border-bottom: 3px solid #5994FF;
-    border-radius: 3px;
-    color: #D2E2FF;
+.footer-w3ls p a{
+	color:#fff;
+	 -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
-.form-style-7 input[type="submit"]:hover,
-.form-style-7 input[type="button"]:hover{
-    background: #6B9FFF;
-    color:#fff;
+.footer-w3ls p a:hover{
+	text-decoration:underline;
+}
+@media(max-width:1366px){
+	.content-w3 h1 {
+		font-size: 175px;
+	}
+	.content-w3 p {
+		margin: 40px auto 0 auto;
+	}
+}
+@media(max-width:1080px){
+	.content-w3 {
+		background: url(../img/bg.jpg) no-repeat -94px -71px;
+	}
+	.content-w3 {
+		min-height: 563px;
+	}
+	.content-w3 p {
+		width: 65%;
+	}
+}
+@media(max-width:1024px){
+	.top-bar-agile {
+		width: 71%;
+	}
+	.content-w3 {
+		width: 71%;
+		min-height: 454px;
+	}
+}
+@media(max-width:768px){
+	.content-w3 {
+		background: url(../img/bg.jpg) no-repeat -193px -80px;
+	}
+	.content-w3 p {
+		width: 75%;
+	}
+}
+@media(max-width:736px){
+	.top-bar-agile {
+		padding: 25px 0;
+	}
+	.logo-agileits img {
+		width: 36%;
+	}
+	.logo-agileits {
+		margin-top:10px;
+	}
+	.content-w3 p {
+		width: 82%;
+	}
+}
+@media(max-width:667px){
+	.content-w3 {
+		background: url(../img/bg.jpg) no-repeat -242px -86px;
+	}
+	.content-w3 p {
+		width: 90%;
+	}
+}
+@media(max-width:600px){
+	.content-w3 {
+		background: url(../img/bg.jpg) no-repeat -263px -86px;
+	}
+	.nav-agileinfo ul li a {
+		font-size: 16px;
+		padding: 16px 12px;
+	}
+	.content-w3 h1 {
+		font-size: 160px;
+	}
+	.content-w3 p {
+		width: 92%;
+		font-size:15px;
+	}
+}
+@media(max-width:568px){
+	.content-w3 h2 {
+		font-size: 28px;
+	}
+}
+
+@media(max-width:480px){
+	.logo-agileits img {
+		width: 44%;
+	}
+	.nav-agileinfo ul li a {
+		font-size: 15px;
+		padding: 16px 9px;
+	}
+	.content-w3 {
+		background: url(../img/bg.jpg) no-repeat -293px -86px;
+	}
+	.content-w3 h1 {
+		font-size: 150px;
+	}
+	.content-w3 h2 {
+		font-size: 24px;
+		letter-spacing: 2px;
+	}
+	.footer-w3ls p {
+		color: #fff;
+		font-size: 14px;
+		width:90%;
+		margin:20px auto;
+	}
+}
+@media(max-width:414px){
+	.top-bar-agile {
+		width: 80%;
+	}
+	.logo-agileits img {
+		width: 48%;
+	}
+	.nav-agileinfo ul li a {
+		font-size: 15px;
+		padding: 16px 7px;
+	}
+	.content-w3 {
+		width: 80%;
+		min-height:425px;
+	}
+	.content-w3 h1 {
+		font-size: 140px;
+	}
+	.content-w3 h2 {
+		font-size: 22px;
+
+	}
+}
+@media(max-width:384px){
+	.nav-agileinfo ul li a {
+		font-size: 14px;
+		padding: 16px 6px;
+	}
+	.top-bar-agile {
+		width: 85%;
+	}
+	.content-w3 {
+		width: 85%;
+	}
+	.content-w3 h2 {
+		font-size: 20px;
+	}
+	.content-w3 p {
+		width: 100%;
+		font-size: 14px;
+	}
+}
+@media(max-width:320px){
+	.top-bar-agile {
+		padding:15px 0;
+	}
+	.nav-agileinfo ul li a {
+		font-size: 13px;
+		padding: 16px 4px;
+	}
+	.content-w3 {
+		background: url(../img/bg.jpg) no-repeat -333px -86px;
+	}
+	.content-w3 h1 {
+		font-size: 135px;
+	}
+	.content-w3 h2 {
+		font-size: 18px;
+	}
 }

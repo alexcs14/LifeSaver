@@ -126,9 +126,6 @@ $("#frmRegister").submit(function(){
 
 // -- Fin -- //
 
-
-
-//-------------------------------------------------PERFIL------------------------------------------//
 $(function() {
     var Accordion = function(el, multiple) {
 		this.el = el || {};

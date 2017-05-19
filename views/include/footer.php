@@ -1,8 +1,8 @@
 
-        			<div class="col-sm-12 col-md-12 col-lg-12 footer1" >
+            <footer>
         				<div class="footer-border"></div>
-        				<p>Realizado por el equipo de desarrollo de <a href="#" target="_blank">LifeSaver</a>.</p>
-        			</div>
+        				Realizado por el equipo de desarrollo de <a href="#" target="_blank">LifeSaver</a>.
+            </footer>
 
 
 

@@ -20,7 +20,7 @@
       </div>
 </div>
 <div class="top-content2 col-xs-12 col-sm-12 col-md-12 col-lg-8">
-        <h2 class="login">Regístrate</h2>
+        <h2 class="login">Únete a nosotros</h2>
     <div class="register-form col-xs-12 col-lg-12">
       <div class="col-sm-5 col-sm-offset-1">
         <form role="form" action="inicio" method="post" id="frmLogin" class="r-form" data-parsley-validate>

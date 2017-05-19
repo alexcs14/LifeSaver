@@ -1,4 +1,3 @@
-<div>
 	<ul id="accordion" class="accordion">
     <li>
     <div class="col col_4 iamgurdeep-pic">
@@ -54,4 +53,3 @@
 	   </ul>
     </li>
   </ul>
-	</div>

@@ -97,6 +97,20 @@ option{
 	outline: 0;
 }
 
+#btnRecuperar{
+	background: #CE5600;
+}
+
+#btnRecuperar:hover{
+	background: #FF9041;
+	outline: 0;
+}
+
+#btnRecuperar:active{
+	background: #CE5600;
+	outline: 0;
+}
+
 
 button.btn:active { outline: 0; opacity: 0.6; color: #fff; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
 

@@ -1,4 +1,4 @@
-<<div class="contenedor-login-seccion1 col-xs-12 col-sm-12 sol-md-4 col-lg-4">
+<div class="contenedor-login-seccion1 col-xs-12 col-sm-12 sol-md-4 col-lg-4">
     <div class="col-sm-8 col-sm-offset-2 text">
       <h1 class="title">LifeSaver</h1>
     </div>

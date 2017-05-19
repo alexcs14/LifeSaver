@@ -77,7 +77,7 @@
                                         </a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="https://pbs.twimg.com/profile_images/554822732206981121/iLd_gsm8.jpeg" alt="user">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://pixel.nymag.com/imgs/daily/vulture/2015/11/25/25-will-smith.w529.h529.jpg" alt="user">
                                             <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <li>
