@@ -108,6 +108,7 @@ $("#frmLogin").submit(function(e){
 
       if(data[0] == true){
         document.location.href="inicio";
+        localStorage.setItem("Esto no es un token",data[2]);
       }else{
         alert(data[1]);
       }
@@ -115,7 +116,9 @@ $("#frmLogin").submit(function(e){
     }
 });
 // -- Fin -- //
-$("#frmRegister").submit(function(){
+
+
+$("#crea").submit(function(){
   alert("Usuario registrado con exito");
 });
 
