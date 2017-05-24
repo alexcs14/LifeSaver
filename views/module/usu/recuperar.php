@@ -1,4 +1,5 @@
-  <form class="r-form" action="recover/email" method="post">
-    <input type="text" name="email" placeholder="Email" required>
-    <button type="submit" name="button" class="btn btn-default">Enviar</button>
+  <form class="r-form" action="" method="post" id="formreco">
+    <input type="email" name="email" placeholder="Email" id="recoveremail" required></br>
+    <input type="text" name ="documento" placeholder="Documento" id="docu" required></br>
+    <button type="submit" name="button" class="btn btn-default" id="btnRecover">Enviar</button>
   </form>
