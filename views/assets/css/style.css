@@ -1469,7 +1469,7 @@ header {
 	color:#71c1ff;
 }
 .contenedor-principal{
-	background: black;
+	background: url(../img/bg2.jpg) no-repeat ;
 }
 .content-w3{
       background: url(../img/bg.jpg) no-repeat 0px -89px;
@@ -1485,8 +1485,8 @@ header {
 		padding-top: 10%;
     font-weight: 700;
     color: #fff;
-	font-family: 'Ravi Prakash', cursive;
-	text-shadow:9px 9px 3px hsl(206, 15%, 40%);
+		font-family: 'Ravi Prakash', cursive;
+		text-shadow:9px 9px 3px rgba(0,0,0,0.8);
 }
 .content-w3 h2{
 	font-size:30px;
