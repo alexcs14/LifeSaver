@@ -41,12 +41,29 @@ class MainController{
     require_once 'views/module/usu/perfil.php';
     require_once 'views/include/footer.php';
   }
-
-  public function newpass(){
+    public function vistaUsu()
+  {
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu/home.php';
+    require_once 'views/include/footer.php';
+  }
+  public function contacto()
+  {
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu/contacto.php';
+    require_once 'views/include/footer.php';
+  }
+  public function legislacion()
+  {
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu/legislacion.php';
+    require_once 'views/include/footer.php';
+  }
+  
+    public function newpass(){
     require_once 'views/include/header.php';
     require_once 'views/module/usu/newpass.php';
     require_once 'views/include/footer.php';
   }
-
 }
 ?>

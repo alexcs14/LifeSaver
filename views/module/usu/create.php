@@ -1,15 +1,41 @@
-<form id ="crea" action="crear" method="post" data-parsley-validate>
-  <h3>Nombres</h3><input type="text" name="data[]" placeholder="Ingrese su nombre" required>
-  <h3>Apellidos</h3><input type="text" name="data[]" placeholder="Ingrese sus apellidos" required>
-  <h3>Email</h3><input type="email" name="data[]" placeholder="Email" id="emailRegis" required>
-  <h3>Contraseña</h3><input type="password" name="data[]" placeholder="Contraseña" id="password" required>
-  <label for="password" class="pas"></label>
-  <h3>Verificar contraseña</h3><input type="password" name="ver" placeholder="Repetir contraseña" id="verify" required>
-  <label for="verify" class="veri"></label>
-  <h3>Fecha de nacimiento</h3><input type="date" name="data[]">
-  <h3>Sexo</h3>
-  <input type="radio" name="data[]" value="1" required>Hombre
-  <input type="radio" name="data[]" value="2" required>Mujer
-  <button type="submit" name="button" class="btn btn-default" id="btnRegister">Registrar</button>
-</form>
-<a href="login" class="btn btn-default">Atras</a>
+<div class="contenedor-login-seccion2 col-xs-12 col-sm-12 sol-md-4 col-lg-4">
+    <div class="col-sm-8 col-sm-offset-2 text">
+      <h1 class="title">LifeSaver</h1>
+    </div>
+      <div class="col-sm-10">
+        <h3 class="h3-eres">"Si ayudo a una persona a tener esperanza no habré vivido en vano"  Martin Luther King</h3>
+      </div>
+</div>
+<div class="top-content2 col-xs-12 col-sm-12 col-md-12 col-lg-8">
+        <h2 class="login">Únete a nosotros</h2>
+    <div class="register-form col-xs-12 col-lg-12">
+      <div class="col-sm-5 col-sm-offset-1">
+        <form role="form" action="crear" method="post" id="crea" class="r-form" data-parsley-validate>
+          <div class="form-group ">
+            <label class="sr-only">Nombres</label>
+            <input type="text" class="r-form-Usuario form-control " name="data[]"  placeholder="Ingresa aquí tus nombres" required>
+          </div>
+          <div class="form-group ">
+            <label class="sr-only">Apellidos</label>
+            <input type="text" class="r-form-Usuario form-control " name="data[]"  placeholder="Ingresa aquí tus apellidos" required>
+          </div>
+
+          <div class="form-group ">
+            <label class="sr-only">Correo</label>
+            <input type="email" class="r-form-Usuario form-control " name="data[]" id="emailRegis" placeholder="Ingresa tu Email" required>
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Contraseña</label>
+            <input type="password" class="r-form-Contraseña form-control" name="data[]" id="password" placeholder="Contraseña" required>
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Repetir Contraseña</label>
+            <input type="password" class="r-form-Contraseña form-control" name="ver" id="verify" placeholder="Repetir Contraseña" required>
+          </div>
+          <button type="submit" name="button" id="btnRegister" class="btn btn-primary" >REGISTRARSE</button>
+        </form>
+        <a href="login" class="btn btn-default">Atras</a>
+      </div>
+    </div>
+</div>
+
