@@ -24,7 +24,7 @@
                         <li><a href="#"></span>
                           <div class="ca-content">
                             <i class="fa fa-location-arrow ca-icon" aria-hidden="true"></i><span class="hidden-xs hidden-sm">
-                            <h2 class="ca-main">Localización</h2>
+                            <h2 class="ca-main">Ubicación</h2>
                           </div>
                         <h3 class="ca-sub">Siempre cerca de ti</h3></a></li>
                         <li><a href="#"></span>

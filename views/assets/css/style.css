@@ -778,17 +778,6 @@ li,ul{
     width: 100%;
 }
 
-.user input {
-    background: rgba(0, 0, 0, 0) url("../images/user.png") no-repeat scroll 7px 12px;
-}
-
-.pass input {
-    background: rgba(0, 0, 0, 0) url("../images/password.png") no-repeat scroll 7px 12px;
-}
-
-.mail input {
-    background: rgba(0, 0, 0, 0) url("../images/mail.png") no-repeat scroll 4px 12px;
-}
 
 .login-signup .tab-content {
     background: #ffffff none repeat scroll 0 0;
@@ -1956,15 +1945,13 @@ div#contact h3 {
     width: 100%;
     padding: 11px 20px;
     border: none;
-    background: rgba(197, 192, 185, 0.37);
     color: #292929;
 }
 .contact-middle p {
     color: #cecece;
-    font-weight: bold;
     margin-bottom: 4px;
     margin-left: 5px;
-	font-size:16px;
+		font-size:16px;
 }
 .contact-middle input[type="text"] {
     margin-bottom: 1.2em;

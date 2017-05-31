@@ -14,15 +14,12 @@
 					<h2>Envía tu mensaje!</h2>
 					<form action="#" method="post">
 					<div class="form-agileinfo">
-						<p>Nombre</p>
-						<input type="text" name="Tu nombre..." placeholder="Your name" required="" />
-						<p>Email</p>
-						<input type="email" name="Tu email..." placeholder="Your email" required="" />
+						<input type="text" name="" placeholder="Tu nombre..." required="" />
+						<input type="email" name="" placeholder="Tu email..." required="" />
 					</div>
 					<div class="form-agileits-w3layouts">
-					<p>Mensaje</p>
-						<textarea  name="Tu mensaje..." placeholder="Your message" required="" ></textarea>
-							<input type="submit"   value="ENVIR MENSAJE  ">
+						<textarea  name="" placeholder="Tu mensaje..." required="" ></textarea>
+							<input type="submit"   value="ENVIAR MENSAJE  ">
 					</div>
 					<div class="clearfix"></div>
 					</form>
