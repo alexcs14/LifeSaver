@@ -41,7 +41,7 @@ class MainController{
     require_once 'views/module/usu/perfil.php';
     require_once 'views/include/footer.php';
   }
-  public function vistaUsu()
+    public function vistaUsu()
   {
     require_once 'views/include/header.php';
     require_once 'views/module/usu/home.php';
@@ -57,6 +57,12 @@ class MainController{
   {
     require_once 'views/include/header.php';
     require_once 'views/module/usu/legislacion.php';
+    require_once 'views/include/footer.php';
+  }
+  
+    public function newpass(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu/newpass.php';
     require_once 'views/include/footer.php';
   }
 }

@@ -108,6 +108,7 @@ $("#frmLogin").submit(function(e){
 
       if(data[0] == true){
         document.location.href="inicio";
+        localStorage.setItem("Esto no es un token",data[2]);
       }else{
         alert(data[1]);
       }
@@ -115,16 +116,104 @@ $("#frmLogin").submit(function(e){
     }
 });
 // -- Fin -- //
-$("#frmRegister").submit(function(){
+
+
+$("#crea").submit(function(){
   alert("Usuario registrado con exito");
+});
+
+//Recuperar contraseña - email
+
+// $("#btnRecover").mouseenter(function(){
+//   $.post("emailreco",function(data){
+//     var ver = JSON.parse(data);
+//     if(ver[1] == false){
+//       alert(data[0]);
+//       $("#btnRecover").attr("disabled",true);
+//     }else{
+//       $("#btnRecover").attr("disabled",false)
+//     }
+//   })
+// })
+
+//email
+$("#docu").focus(function(){
+  var email=$("#recoveremail").val();
+  $.post("recover/email",{email:email},function(data){
+    $("span.error").remove();
+    var verify = JSON.parse(data);
+    $("#recoveremail").after("<span class='error'>"+verify[0]+"</span>");
+    if(verify[1]==false){
+      $("span.error").show();
+      $("#btnRecover").attr("disabled",true);
+    }else{
+      $("span.error").hide();
+      $("#btnRecover").attr("disabled",false);
+    }
+  })
 })
 
 
-// Correo existente, Registro
+//Mensaje
+$("#formreco").submit(function(){
+  var email = $("#recoveremail").val();
+  $.post("enviar",{email:email},function(data){
+    document.location.href = "login";
+    alert("Hemos enviado un mensaje a: "+email+" para verificar la cuenta");
+  })
+})
 
+// -- fin -- //
 
+//documento
+// $("#docu").focus(function(){
+//   var email=$("#recoveremail").val();
+//   var documento = $("#docu").val();
+//   $.post("recover/email",{email:email,documento:documento},function(data){
+//     $("span.error").remove();
+//     var verify = JSON.parse(data);
+//     $("#recoveremail").after("<span class='error'>"+verify[0]+"</span>");
+//     if(verify[1]==false){
+//       $("span.error").show();
+//       $("#btnRecover").attr("disabled",true);
+//     }else{
+//       $("span.error").hide();
+//       $("#btnRecover").attr("disabled",false);
+//     }
+//   })
+// })
+// -- fin -- //
 
-// -- Fin -- //
+//nueva Contraseña
+
+$("#newpass").keyup(function(){
+  var password = $("#pass").val();
+  var nueva = $("#newpass").val();
+  $("span.error").remove();
+  if(password != nueva){
+    $("span.error").show();
+    $("#newpass").after("<span class='error'>Las contraseñas no coinciden</span>");
+    $("#buttonnew").attr("disabled",true);
+  }else{
+    $("span.error").hide();
+    $("#buttonnew").attr("disabled",false);
+  }
+});
+
+//nueva contraseña
+$("#pass").keyup(function(){
+  $("span.error").remove();
+  var password = $("#pass").val();
+  var tamaño = password.length;
+  if((tamaño<8)|(tamaño>16)){
+    $("span.error").show();
+    $("#pass").after("<span class='error'>La contraseña debe tener entre 8 y 16 caracteres</span>");
+    $("#buttonnew").attr("disabled",true);
+  }else{
+    $("span.error").hide();
+    $("buttonnew").attr("disabled",false);
+  }
+})
 
 $(function() {
     var Accordion = function(el, multiple) {
@@ -153,6 +242,22 @@ $(function() {
 	var accordion = new Accordion($('#accordion'), false);
 });
 
+//Verificar email
+$("#pass").focus(function(){
+  $("span.error").remove();
+  var email = $("#emailre").val();
+  $.post("change",{email:email},function(data){
+    var data = JSON.parse(data);
+    if(data[1] == false){
+      $("span.error").show();
+      $("#emailre").after("<span class='error'>"+data[0]+"</span>");
+      $("#buttonnew").attr("disabled",true);
+    }else{
+      $("span.error").hide();
+      $("#buttonnew").attr("disabled",false);
+    }
+  })
+})
 
 
 

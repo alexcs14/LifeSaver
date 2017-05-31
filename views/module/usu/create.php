@@ -1,16 +1,3 @@
-<!--<div class="form-group ">
-  <label class="tipo-doc">Tipo de documento: </label>
-  <select class"doc" name="data[]" required>
-    <option value="1">Cédula de ciudadanía</option>
-    <option value="2">Tarjeta de identidad</option>
-    <option value="3">Cédula Extranjera</option>
-  </select>
-</div>
-<div class="form-group ">
-  <label class="sr-only">Número de documento</label>
-  <input type="text" class="r-form-Usuario form-control " name="data[]"  placeholder="Ingresa tu número de documento" required>
-</div>
--->
 <div class="contenedor-login-seccion2 col-xs-12 col-sm-12 sol-md-4 col-lg-4">
     <div class="col-sm-8 col-sm-offset-2 text">
       <h1 class="title">LifeSaver</h1>
@@ -23,7 +10,7 @@
         <h2 class="login">Únete a nosotros</h2>
     <div class="register-form col-xs-12 col-lg-12">
       <div class="col-sm-5 col-sm-offset-1">
-        <form role="form" action="inicio" method="post" id="frmLogin" class="r-form" data-parsley-validate>
+        <form role="form" action="crear" method="post" id="crea" class="r-form" data-parsley-validate>
           <div class="form-group ">
             <label class="sr-only">Nombres</label>
             <input type="text" class="r-form-Usuario form-control " name="data[]"  placeholder="Ingresa aquí tus nombres" required>
@@ -47,7 +34,8 @@
           </div>
           <button type="submit" name="button" id="btnRegister" class="btn btn-primary" >REGISTRARSE</button>
         </form>
+        <a href="login" class="btn btn-default">Atras</a>
       </div>
     </div>
-
 </div>
+
