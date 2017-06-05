@@ -1,11 +1,4 @@
-<div class="">
-  <form class="r-form" action="" method="post" id="formreco">
-    <input type="text" placeholder="Correo electronico" name="email" id="recoveremail" required>
-    <input type="text" placeholder="Nueva contraseña" name="documento" id="docu" required>
-    <input type="text" placeholder="Confirmar contraseña">
-    <button type="submit" name="button" class="btn btn-default" id="btnRecover">Enviar</button>  
-  </form>
-</div>
+
 
 <div class="contenedor-login-seccion3 col-xs-12 col-sm-12 sol-md-4 col-lg-4">
     <div class="col-sm-8 col-sm-offset-2 text">

@@ -59,11 +59,17 @@ class MainController{
     require_once 'views/module/usu/legislacion.php';
     require_once 'views/include/footer.php';
   }
-  
-    public function newpass(){
+
+  public function newpass(){
     require_once 'views/include/header.php';
     require_once 'views/module/usu/newpass.php';
     require_once 'views/include/footer.php';
   }
+  public function completar(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu/completar.php';
+    require_once 'views/include/footer.php';
+  }
+
 }
 ?>
