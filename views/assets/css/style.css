@@ -146,8 +146,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#390599', end
 
 	justify-content: center;align-items: center;
 	flex-direction: column;
-	background: linear-gradient(to right, rgba(255,98,0,1) 0%, rgba(255,191,0,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6200', endColorstr='#ffbf00', GradientType=1 );
+	background: linear-gradient(to right, rgba(224,103,22,1) 0%, rgba(227,162,32,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e06716', endColorstr='#e3a220', GradientType=1 );
 }
 
 .top-content3 .description a {
@@ -165,9 +165,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6200', end
 
 	justify-content: center;align-items: center;
 	flex-direction: column;
-	background: linear-gradient(to right, rgba(1,82,0,1) 0%, rgba(32,255,28,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#015200', endColorstr='#20ff1c', GradientType=1 );
-}
+	background: linear-gradient(to right, rgba(0,97,97,1) 0%, rgba(0,194,129,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006161', endColorstr='#00c281', GradientType=1 );}
 
 .top-content5 .description a {
 	color: #fff;
@@ -225,6 +224,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#015200', end
 	opacity: 1.5;
 }
 
+.button-gay{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .h3-eres{
 	color: white;
 }

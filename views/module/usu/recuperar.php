@@ -15,17 +15,17 @@
         <form role="form" action="inicio" method="post" id="frmLogin" class="r-form" data-parsley-validate>
           <div class="form-group ">
             <label class="sr-only">Correo electrónico</label>
-            <input type="email" class="r-form-Usuario form-control" name="data[]" placeholder="Correo Electrónico" required>
+            <input type="email" class="r-form-Usuario form-control" name="email" id="recoveremail" placeholder="Correo Electrónico" required>
           </div>
           <div class="form-group">
             <label class="sr-only">Nueva Contraseña</label>
-            <input type="password" class="r-form-Contraseña form-control" id="txtpass" name="data[]" placeholder="Nueva Contraseña" required>
+            <input type="password" class="r-form-Contraseña form-control" name="documento" id="docu" placeholder="Nueva Contraseña" required>
           </div>
           <div class="form-group">
             <label class="sr-only">Confirmar Contraseña</label>
-            <input type="password" class="r-form-Contraseña form-control" id="txtpass" name="data[]" placeholder="Confirmar Contraseña" required>
+            <input type="password" class="r-form-Contraseña form-control" id="" name="" placeholder="Confirmar Contraseña" required>
           </div>
-          <button type="submit" name="button" id="btnRecuperar" class="btn btn-primary" >RECUPERAR CONTRASEÑA</button>
+          <button type="submit" name="button" id="btnRecover" class="btn btn-primary" >RECUPERAR CONTRASEÑA</button>
         </form>
         <div class="form-group">
           <span>Recibirás un correo de parte de LifeSaver con la información necesaria para recuperar tu cuenta</span>

@@ -18,8 +18,44 @@ textarea.form-control {
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
+#no{
+	float: left;
+	margin-top: 5%;
+	margin-left: 10%;
+	height: 5vh;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 3px;
+}
+
+#no:active{
+	background-color: #FF3A3A;
+	border-color: #FF3A3A;
+}
+
+#no:focus{
+	background-color: #FF3A3A;
+	border-color: #FF3A3A;
+
+}
+
+#si{
+	float: left;
+	margin-left: 5%;
+	margin-top: 5%;
+	height: 5vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 3px;
+}
+
 #yes, #no{
 	float: left;
+}
+
+#cerrar{
+	background: rgba(255, 255, 255, 0.4);
+	color: red;
+	height: 4vh;
+
 }
 
 label{
@@ -60,13 +96,19 @@ textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeh
 button.btn {
 	height: 7vh;
 	border: none;
-	width: 90%;
 	background: #0d47a1;
 	margin-bottom: 10%;
 }
 button.btn:hover{
 	background:#1976d2;
 }
+
+.guardar-numero{
+	height: 5vh !important;
+	background-color: #00A2FF !important;
+
+}
+
 .a-olvido{
 	color: white;
 	font-size:3vh;
@@ -109,36 +151,52 @@ option{
 	outline: 0;
 }
 
-#btnRecuperar{
+#btnRecover{
 	background: #CE5600;
 }
 
-#btnRecuperar:hover{
+#btnRecover:hover{
 	background: #FF9041;
 	outline: 0;
 }
 
-#btnRecuperar:active{
+#btnRcovear:active{
 	background: #CE5600;
 	outline: 0;
 }
 
 #btnCompletar{
-	background: #00BC03;
+	background-color:#014552;
 }
 
 #btnCompletar:hover{
-	background: #32F835;
+	background: #02C6C6;
 	outline: 0;
 }
 
 #btnCompletar:active{
-	background: #00BC03;
+	background: #02C6C6;
 	outline: 0;
 }
 
 #completar{
 	padding-top: 0px;
+}
+
+@media (max-width: 415px){
+
+	h2.login{
+		font-size: 40px !important;
+	}
+	h3.info-title{
+		font-size: 30px;
+	}
+	label{
+		font-size: 20px !important;
+	}
+	.button-gay{
+		margin-top: 10% !important;
+	}
 }
 
 .completar3{
