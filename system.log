@@ -97,3 +97,6 @@
 17-05-2017 10:25:27  Error: #23000 -> SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'usu_nom' cannot be null Archivo: C:\xampp\htdocs\LifeSaver\model\usu.model.php Linea: (29)
 17-05-2017 10:47:18  Error: #23000 -> SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'usu_nom' cannot be null Archivo: C:\xampp\htdocs\LifeSaver\model\usu.model.php Linea: (29)
 17-05-2017 11:17:30  Error: #23000 -> SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'usu_nom' cannot be null Archivo: C:\xampp\htdocs\LifeSaver\model\usu.model.php Linea: (29)
+08-06-2017 07:13:49  Error: #42S22 -> SQLSTATE[42S22]: Column not found: 1054 Unknown column 'rol_cod' in 'field list' Archivo: C:\xampp\htdocs\LifeSaver\model\usu.model.php Linea: (29)
+08-06-2017 07:38:42  Error: #42S22 -> SQLSTATE[42S22]: Column not found: 1054 Unknown column 'rol_cod' in 'field list' Archivo: C:\xampp\htdocs\LifeSaver\model\usu.model.php Linea: (29)
+08-06-2017 08:00:09  Error: #42S22 -> SQLSTATE[42S22]: Column not found: 1054 Unknown column 'rol_cod' in 'field list' Archivo: C:\xampp\htdocs\LifeSaver\model\usu.model.php Linea: (29)
