@@ -1,11 +1,13 @@
 
             <footer>
-        				<div class="footer-border"></div>
+        				<div class="container footer-border">
         				Realizado por el equipo de desarrollo de <a href="#" target="_blank">LifeSaver</a>.
+                </div>
             </footer>
 
 
 
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="views\assets\js\jquery-3.2.0.min.js"></script>
     <script src="views/assets/js/main.js"></script>
     <script src="views/assets/js/bootstrap.min.js"></script>

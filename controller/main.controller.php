@@ -59,11 +59,27 @@ class MainController{
     require_once 'views/module/usu/legislacion.php';
     require_once 'views/include/footer.php';
   }
-  
-    public function newpass(){
+
+  public function newpass(){
     require_once 'views/include/header.php';
     require_once 'views/module/usu/newpass.php';
     require_once 'views/include/footer.php';
   }
+  public function completar1(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu/completar1.php';
+    require_once 'views/include/footer.php';
+  }
+  public function completar2(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu/completar2.php';
+    require_once 'views/include/footer.php';
+  }
+  public function completar3(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu/completar3.php';
+    require_once 'views/include/footer.php';
+  }
+
 }
 ?>
