@@ -32,12 +32,13 @@
             <label class="sr-only">Número Telefónico</label>
             <input type="email" class="r-form-Usuario form-control " name="data[]" id="" placeholder="Ingresa tu Número Telefónico" required>
           </div>
-          <button type="submit" name="button" id="btnCompletar" class="btn btn-primary" >SIGUIENTE <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+          <button type="submit" name="button" id="btnCompletar" class="btn btn-primary" onclick="abrircompletar2()">SIGUIENTE <i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
         </form>
       </div>
 </div>
-
-
+<?php require_once("completar2.php");
+  require_once("completar3.php");
+?>
 
 
 

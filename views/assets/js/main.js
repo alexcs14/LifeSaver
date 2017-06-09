@@ -277,3 +277,18 @@ function adjust_textarea(h) {
     h.style.height = "20px";
     h.style.height = (h.scrollHeight)+"px";
 }
+
+
+// ================================Transición Completar Perfil===============================//
+
+var completar2 = document.getElementById('completar2');
+var completar3 = document.getElementById('completar3');
+
+function abrircompletar2() {
+  this.completar2.style.transform = "translateX(450px)";
+  this.completar2.style.transition = "0.5s";
+}
+function abrircompletar3() {
+  this.completar3.style.transform = "translateX(450px)";
+  this.completar3.style.transition = "0.5s";
+}
