@@ -1,7 +1,7 @@
-<!--blog -->
-<div class="content-leg">
-	<div class="blog" id="blog">
-		<div class="container">
+
+
+	<div class="blog col-lg-12" id="blog">
+		<div class="container container-legis">
 		<h3 class="tittle">LEGISLACIÓN</h3>
 		<p class="heading-btm-w3ls">Las bases que fundamentan un servicio correcto para cada individuo.</p>
 			<div class="blog-grid-w3-agileits">
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+
 <!-- //blog -->
 						<!-- Modal2 -->
 						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">

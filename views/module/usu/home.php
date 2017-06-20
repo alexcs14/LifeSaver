@@ -20,11 +20,11 @@
                             <i class="fa fa-heartbeat ca-icon" aria-hidden="true"></i><span class="hidden-xs hidden-sm">
                             <h2 class="ca-main">Donación</h2>
                           </div>
-                        <h3 class="ca-sub">Solidaridad mutua</h3></a></li>
+                        <h3 class="ca-sub">Ayuda mutua</h3></a></li>
                         <li><a href="#"></span>
                           <div class="ca-content">
                             <i class="fa fa-location-arrow ca-icon" aria-hidden="true"></i><span class="hidden-xs hidden-sm">
-                            <h2 class="ca-main">Ubicación</h2>
+                            <h2 class="ca-main">Estatuto</h2>
                           </div>
                         <h3 class="ca-sub">Siempre cerca de ti</h3></a></li>
                         <li><a href="#"></span>
@@ -99,8 +99,10 @@
                         </div>
                     </header>
                 </div>
-                <div class="user-dashboard">
-                    <h1>Bienvenido Jhony!</h1>
+                <div class="user-dashboard col-lg-11">
+                    <?php
+                      require_once ("legislacion.php");
+                     ?>
                 </div>
             </div>
         </div>

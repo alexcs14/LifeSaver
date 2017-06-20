@@ -318,7 +318,6 @@ footer{
 
 footer .footer-border {
 	margin: 0 auto;
-	padding-bottom: 30px;
 	border-top: 1px solid #fff;
 	border-top: 1px solid rgba(255, 255, 255, 0.6);
 	background: transparent;
@@ -878,12 +877,6 @@ li,ul{
     padding: 70px 0;
 }
 
-
-/*Login Signup Page*/
-
-
-/*Home Page*/
-
 .home {
     background: #f6f7fa;
 }
@@ -918,7 +911,7 @@ li,ul{
     vertical-align: top;
 }
 .logo img {
-    max-width: 80px;
+    max-width: 75px;
     padding: 10px 0 ;
     width: 100%;
 		position: relative;
@@ -1137,14 +1130,12 @@ header {
 }
 .ca-menu li:hover .ca-icon{
 		color: #C0FF00;
-		font-size: 50px;
-		opacity: 0.2;
 		left: -20px;
 		transform: rotate(360deg);
 }
 .ca-menu li:hover .ca-main{
     color: #C0FF00;
-    font-size: 18px;
+
 }
 .ca-menu li:hover .ca-sub{
     color: #fff;
@@ -1200,16 +1191,14 @@ header {
     transition: all 0.5s ease;
 }
 
-.user-dashboard {
-    padding: 0 20px;
-}
+
 
 .user-dashboard h1 {
     color: #FFF;
     font-size: 30px;
     font-weight: 500;
     margin: 0;
-    padding: 21px 0;
+
 }
 .sales {
     background: #ffffff none repeat scroll 0 0;
@@ -1348,9 +1337,6 @@ header {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 	}
-/*Main CSS*/
-
-
 
 
 
@@ -1446,7 +1432,6 @@ header {
         font-size: 14px;
         font-weight: 600;
         margin: 0;
-        padding: 13px 0 0;
 }
     .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle > span {
         font-size: 11px;
@@ -1746,6 +1731,10 @@ header {
 /*===========================================================================================================================
 =============================================================LGISLACIÓN Y CPNTACTO====================================================*/
 
+
+
+
+
 input[type="button"],input[type="submit"]{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -1830,10 +1819,10 @@ input[type="submit"],.w3l_header_left ul li a,.related-post-right h4 a,.comments
 /*-- //Banner-Slider --*/
 /*-- /about --*/
 .blog,.contact-agile{
-	padding: 100px 0px;
+	padding: 30px 0px;
 }
 p.heading-btm-w3ls {
-    color: #A7A7A7;
+    color: grey;
     font-size: 15px;
     text-align: center;
     margin: .5em 0em 3em;
@@ -1841,7 +1830,7 @@ p.heading-btm-w3ls {
 	word-spacing: 1px;
 }
 h3.tittle{
-    color: #E4E4E4;
+    color: #000;
     font-size: 34px;
     text-align: center;
     text-transform: uppercase;
@@ -1854,7 +1843,7 @@ h3.tittle span{
 }
 p.para-w3-agileits {
     font-size: 16.5px;
-    color: #B7B7B7;
+    color: grey;
     line-height: 35px;
 }
 
@@ -1866,7 +1855,7 @@ p.para-w3-agileits {
 
 /*-- blog Section --*/
 .blog {
-    background:rgba(51, 122, 183, 0.15);
+		width: 110%;
 }
 .blog-grid-w3-agileits {
     margin-bottom: 3em;
@@ -1900,7 +1889,7 @@ p.para-w3-agileits {
 }
 .blog-info-w3layouts h6 a {
     text-decoration: none;
-    color: #E4E4E4;
+    color: slategrey;
     font-size: 20px;
     letter-spacing: 1px;
     margin-bottom: .5em;
@@ -1916,7 +1905,7 @@ a.blog-text-w3ls {
     margin: 0px 15px 9px 0px;
 }
 .blog-info-w3layouts span {
-    color: #fff;
+    color: black;
     font-size: 14px;
 }
 a.blog-more-agile {
@@ -1971,13 +1960,12 @@ a.mid-bar::after {
 	position:relative;
 }
 
-.content-leg{
-	background: linear-gradient(to bottom, rgba(0,101,148,1) 0%, rgba(51,51,51,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006594', endColorstr='#333333', GradientType=0 );
+.container-legis{
+	width: 95%;
 }
-/*--// blog Section --*/
 
-/*--Contact --*/
+
+
 div#contact h3 {
     color: #fbfafa;
 }
