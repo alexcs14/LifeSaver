@@ -1,5 +1,4 @@
 <?php
-require_once "model/random.php";
 require_once 'model/usu.model.php';
 
 class UsuController{

@@ -107,7 +107,7 @@ $("#frmLogin").submit(function(e){
       var data = JSON.parse(data);
 
       if(data[0] == true){
-        document.location.href="inicio";
+        document.location.href="legislacion";
         localStorage.setItem("Esto no es un token",data[2]);
       }else{
         alert(data[1]);

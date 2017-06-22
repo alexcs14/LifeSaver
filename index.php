@@ -1,4 +1,5 @@
 <?php
+require_once "model/random.php";
 session_start();
 if(isset($_REQUEST["c"])){
   $controller=strtolower($_REQUEST["c"]);
