@@ -98,6 +98,7 @@ button.btn {
 	border: none;
 	background: #0d47a1;
 	margin-bottom: 10%;
+	transition: .5s all;
 }
 button.btn:hover{
 	background:#1976d2;

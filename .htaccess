@@ -16,3 +16,6 @@ RewriteRule ^newpass$        ?c=main&a=newpass
 RewriteRule ^change$         ?c=usu&a=verificar_email
 RewriteRule ^enviar$         ?c=usu&a=enviar_email
 RewriteRule ^Save$           ?c=usu&a=token
+RewriteRule ^contacto$       ?c=contacto
+RewriteRule ^legislacion$    ?c=estatuto
+RewriteRule ^mi_perfil$      ?c=perfil

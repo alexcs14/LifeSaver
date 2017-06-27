@@ -21,19 +21,19 @@
                             <h2 class="ca-main">Donación</h2>
                           </div>
                         <h3 class="ca-sub">Ayuda mutua</h3></a></li>
-                        <li><a href="#"></span>
+                        <li><a href="legislacion"></span>
                           <div class="ca-content">
                             <i class="fa fa-location-arrow ca-icon" aria-hidden="true"></i><span class="hidden-xs hidden-sm">
                             <h2 class="ca-main">Estatuto</h2>
                           </div>
                         <h3 class="ca-sub">Siempre cerca de ti</h3></a></li>
-                        <li><a href="#"></span>
+                        <li><a href="contacto"></span>
                           <div class="ca-content">
                             <i class="fa fa-inbox ca-icon" aria-hidden="true"></i><span class="hidden-xs hidden-sm">
                             <h2 class="ca-main">Contacto</h2>
                           </div>
                         <h3 class="ca-sub">Comunícate</h3></a></li>
-                        <li><a href="#"></span>
+                        <li><a href="mi_perfil"></span>
                           <div class="ca-content">
                             <i class="fa fa-user ca-icon" aria-hidden="true"></i><span class="hidden-xs hidden-sm">
                             <h2 class="ca-main">Mi Perfil</h2>
@@ -99,13 +99,3 @@
                         </div>
                     </header>
                 </div>
-                <div class="user-dashboard">
-                    <?php
-                      require_once ("legislacion.php");
-                     ?>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</body>
