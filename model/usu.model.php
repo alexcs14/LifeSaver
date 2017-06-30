@@ -1,7 +1,7 @@
 <?php
 include "model/conn.model.php";
-require_once('library/PHPMailer/PHPMailerAutoload.php');
-include "views/include/anexo/include.php";
+//require_once('library/PHPMailer/PHPMailerAutoload.php');
+//include "views/include/anexo/include.php"; DANIELLLL MIRE ESE ARCHIVO SON CONSTATNTES PARA PHPMAILER
 
 
 class UsuModel{
@@ -22,12 +22,11 @@ class UsuModel{
     }
   }
 
-  public function create($data){
+  /*public function create($data){
     try {
       $sql="INSERT INTO usuario (usu_cod,rol_cod,usu_nom,usu_ape,usu_email,usu_fechna,usu_sex) VALUES(?,?,?,?,?,?,?)";
       $query=$this->pdo->prepare($sql);
       $query->execute(array($data[7],$data[6],$data[0],$data[1],$data[2],$data[4],$data[5]));
-
       $sql="INSERT INTO acceso VALUES(?,?,?,?,?)";
       $query=$this->pdo->prepare($sql);
       $query->execute(array($data[8],$data[7],$data[3],$data[9],$data[10]));
@@ -181,7 +180,7 @@ public function updateUserByToken($data){
       DataBase::errorLog($cod,$file,$line,$text);
     }
 
-  }
+  }*/
 
   public function __DESTRUCT(){
     DataBase::disconnect();
