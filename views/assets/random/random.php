@@ -1,6 +1,6 @@
 <?php
 
-public function randomAlpha($lenght){
+function randomAlpha($lenght){
   $character="ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvxyz0987654321";
   $characterLen=strlen($character);
   $random="";

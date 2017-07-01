@@ -1,6 +1,7 @@
 <?php
-require_once "views/assets/random/random.php";
 session_start();
+require_once "model/conn.model.php";
+require_once "views/assets/random/random.php";
 if(isset($_REQUEST["c"])){
   $controller=strtolower($_REQUEST["c"]);
   $action=isset($_REQUEST["a"]) ? $_REQUEST["a"]:"index";

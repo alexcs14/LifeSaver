@@ -1,5 +1,4 @@
 <?php
-include "model/conn.model.php";
 //require_once('library/PHPMailer/PHPMailerAutoload.php');
 //include "views/include/anexo/include.php"; DANIELLLL MIRE ESE ARCHIVO SON CONSTATNTES PARA PHPMAILER
 

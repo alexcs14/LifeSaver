@@ -3,13 +3,12 @@
         <div class="row display-table-row">
             <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
                 <div class="logo">
-                    <a hef="#"><img src="views/assets/img/Logo.png" alt="merkery_logo" class="hidden-xs hidden-sm">
-                        <h2>LifeSaver</h2><img src="views/assets/img/Logo.png" alt="merkery_logo" class="visible-xs visible-sm circle-logo">
-                    </a>
+                  <img src="views/assets/img/Logo.png" alt="merkery_logo" class="hidden-xs hidden-sm">
+                  <h2>LifeSaver</h2><img src="views/assets/img/Logo.png" alt="merkery_logo" class="visible-xs visible-sm circle-logo">
                 </div>
                 <div class="navi">
                     <ul class="ca-menu">
-                        <li class="active"><a href="#"></span>
+                        <li class="active"><a href="dashboard"></span>
                           <div class="ca-content">
                             <i class="fa fa-home ca-icon" aria-hidden="true"></i><span class="hidden-xs hidden-sm">
                             <h2 class="ca-main">Inicio</h2>

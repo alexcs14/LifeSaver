@@ -34,8 +34,7 @@
           </div>
           <button type="submit" name="button" id="btnRegister" class="btn btn-primary" >REGISTRARSE</button>
         </form>
-        <a href="login" class="btn btn-default">Atras</a>
+        <a href="inicio" class="btn btn-default">Atras</a>
       </div>
     </div>
 </div>
-

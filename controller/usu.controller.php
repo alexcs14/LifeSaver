@@ -8,9 +8,39 @@ class UsuController{
   public function __CONSTRUCT(){
     $this->model = new UsuModel();
   }
+  public function index(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu_mod/create.php';
+    require_once 'views/include/footer.php';
+  }
+  public function recoverPass(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu_mod/recuperar.php';
+    require_once 'views/include/footer.php';
+  }
+  public function newpass(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu_mod/newpass.php';
+    require_once 'views/include/footer.php';
+  }
+  public function completar1(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu_mod/completar/completar1.php';
+    require_once 'views/include/footer.php';
+  }
+  public function completar2(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu_mod/completar/completar2.php';
+    require_once 'views/include/footer.php';
+  }
+  public function completar3(){
+    require_once 'views/include/header.php';
+    require_once 'views/module/usu_mod/completar/completar3.php';
+    require_once 'views/include/footer.php';
+  }
 
 // Crear cuenta
-  public function create(){
+  /*public function create(){
 
       $data=$_POST["data"];
       $ver=$_POST["ver"];
@@ -141,7 +171,7 @@ public function cambio(){
   $result = $this->model->new_pass($data);
   echo $result;
 }
-//}
+//}*/
 
   public function logout(){
     session_destroy();

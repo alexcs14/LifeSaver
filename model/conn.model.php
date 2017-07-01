@@ -2,7 +2,7 @@
 class DataBase{
 
   private static $dbhost="localhost";
-  private static $dbname="proyecto_grado";
+  private static $dbname="lifesaver";
   private static $dbuser="root";
   private static $dbpass="";
   private static $dbconn=null;

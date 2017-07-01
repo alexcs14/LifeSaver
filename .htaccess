@@ -1,18 +1,18 @@
 RewriteEngine on
 
-RewriteRule ^inicio$         ?c=main&a=inicio
-RewriteRule ^registro$       ?c=main&a=viewCreate
-RewriteRule ^login$          ?c=main&a=index
+RewriteRule ^inicio$         index.php
 RewriteRule ^error$          ?c=main&a=error
+RewriteRule ^dashboard$      ?c=main&a=dashboard
 
+RewriteRule ^registro$       ?c=usu
 RewriteRule ^crear$          ?c=usu&a=create
 RewriteRule ^acceso/validar$ ?c=usu&a=validar
 RewriteRule ^validacion$     ?c=usu&a=userAut
 RewriteRule ^CerrarSesion$   ?c=usu&a=logout
-RewriteRule ^recover$        ?c=main&a=recoverPass
+RewriteRule ^recover$        ?c=usu&a=recoverPass
 RewriteRule ^valCorreo$      ?c=usu&a=validarEmail
 RewriteRule ^recover/email$  ?c=usu&a=recover
-RewriteRule ^newpass$        ?c=main&a=newpass
+RewriteRule ^newpass$        ?c=usu&a=newpass
 RewriteRule ^change$         ?c=usu&a=verificar_email
 RewriteRule ^enviar$         ?c=usu&a=enviar_email
 RewriteRule ^Save$           ?c=usu&a=token
