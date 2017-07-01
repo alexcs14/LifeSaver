@@ -1,16 +1,11 @@
-
-
-
-    <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="views\assets\js\jquery-3.2.0.min.js"></script>
-    <script src="views/assets/js/main.js"></script>
+    <script src="views/assets/js/jquery-3.2.0.min.js"></script>
     <script src="views/assets/js/bootstrap.min.js"></script>
-    <script src="views/parsley/parsley.min.js"></script>
-    <script src="views/parsley/es.js"></script>
+    <script src="views/assets/js/parsley/parsley.min.js"></script>
+    <script src="views/assets/js/parsley/es.js"></script>
     <script src="views/assets/js/jquery.backstretch.min.js"></script>
-    <script type="text/javascript" src="views/assets/js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="views/assets/js/move-top.js"></script>
-    <script type="text/javascript" src="views/assets/js/easing.js"></script>
+    <script src="views/assets/js/move-top.js"></script>
+    <script src="views/assets/js/easing.js"></script>
+    <script src="views/assets/js/main.js"></script>
     <script type="text/javascript">
     	jQuery(document).ready(function($) {
     		$(".scroll").click(function(event){

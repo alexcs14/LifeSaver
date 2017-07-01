@@ -1,7 +1,6 @@
 <?php
-include "model/conn.model.php";
-require_once('library/PHPMailer/PHPMailerAutoload.php');
-include "views/include/anexo/include.php";
+//require_once('library/PHPMailer/PHPMailerAutoload.php');
+//include "views/include/anexo/include.php"; DANIELLLL MIRE ESE ARCHIVO SON CONSTATNTES PARA PHPMAILER
 
 
 class UsuModel{
@@ -22,17 +21,15 @@ class UsuModel{
     }
   }
 
-  public function create($data){
+  public function usuarioCreate($data){
     try {
-      $sql="INSERT INTO usuario (usu_cod,rol_cod,usu_nom,usu_ape,usu_email,usu_fechna,usu_sex) VALUES(?,?,?,?,?,?,?)";
+      $sql="INSERT INTO usuario VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
       $query=$this->pdo->prepare($sql);
-      $query->execute(array($data[7],$data[6],$data[0],$data[1],$data[2],$data[4],$data[5]));
-
+      $query->execute(array($data[5],$data[0],$data[1],$data[7],$data[8],$data[8],$data[8],$data[8],$data[8],$data[8],$data[8],$data[8],$data[8],$data[9]));
       $sql="INSERT INTO acceso VALUES(?,?,?,?,?)";
       $query=$this->pdo->prepare($sql);
-      $query->execute(array($data[8],$data[7],$data[3],$data[9],$data[10]));
-
-      $msn= "login";
+      $query->execute(array($data[6],$data[2],$data[3],$data[10],$data[5]));
+      $msn= "inicio";
     } catch (PDOException $e) {
       $cod = $e->getCode();
       $file = $e->getFile();
@@ -44,12 +41,12 @@ class UsuModel{
   return $msn;
   }
 
-  public function readUserbyEmail($data){
+  public function readUsuariobyEmail($data){
     try{
-        $sql="SELECT usuario.usu_cod,usu_nom,usu_ape,usu_documento,acc_pass,acc_token,acc_est FROM usuario INNER JOIN acceso ON acceso.usu_cod = usuario.usu_cod WHERE usu_email = ?";
-        $query = $this->pdo->prepare($sql);
-        $query -> execute(array($data[0]));
-        $result = $query->fetch(PDO::FETCH_BOTH);
+      $sql="SELECT * FROM usuario INNER JOIN acceso ON(acceso.usu_id = usuario.usu_id) WHERE acc_email = ?";
+      $query = $this->pdo->prepare($sql);
+      $query -> execute(array($data[0]));
+      $result = $query->fetch(PDO::FETCH_BOTH);
     }catch(PDOException $e){
       $cod = $e->getCod();
       $file = $e->getFile();
@@ -60,7 +57,7 @@ class UsuModel{
       return $result;
   }
 
-  public function mail($correo){
+/*  public function mail($correo){
     $email = new PHPMailer;
     $email->isSMTP();
     $email->Host = 'smtp.gmail.com';
@@ -181,7 +178,7 @@ public function updateUserByToken($data){
       DataBase::errorLog($cod,$file,$line,$text);
     }
 
-  }
+  }*/
 
   public function __DESTRUCT(){
     DataBase::disconnect();

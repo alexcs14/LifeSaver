@@ -1,4 +1,3 @@
-<?php require_once 'views/include/menu.php'; ?>
 
 
 		<div class="container-legis">
@@ -101,7 +100,7 @@
 										<h4>LEY 1805</h4>
 										<img src="views/assets/img/b3.jpg" alt=" " class="img-responsive">
 										<h5>ARTICULO 11</h5>
-										<p class="text-justify">Todo paciente que tenga una enfermedad que afecte un órgano o tejido susceptible de trasplante, deberá ser evaluado por una Institución Prestadora de Servicios de Salud (IPS) habilitada en el servicio de trasplante de órganos e implante de tejidos, con el fin de saber si es apto o no para ingresar a la Lista de Personas en Espera de Donación (lEO). Esta evaluación deberá realizarse dentro de los tres (3) meses siguientes al diagnóstico. Si la persona es apta, deberá ser ingresada inmediatamente a la Lista de Personas en Espera de Donación (LEO).</p>									
+										<p class="text-justify">Todo paciente que tenga una enfermedad que afecte un órgano o tejido susceptible de trasplante, deberá ser evaluado por una Institución Prestadora de Servicios de Salud (IPS) habilitada en el servicio de trasplante de órganos e implante de tejidos, con el fin de saber si es apto o no para ingresar a la Lista de Personas en Espera de Donación (lEO). Esta evaluación deberá realizarse dentro de los tres (3) meses siguientes al diagnóstico. Si la persona es apta, deberá ser ingresada inmediatamente a la Lista de Personas en Espera de Donación (LEO).</p>
 									</div>
 								</div>
 							</div>

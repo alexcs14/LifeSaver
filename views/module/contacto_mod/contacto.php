@@ -1,4 +1,3 @@
-<?php require_once 'views/include/menu.php'; ?>
 <div class="contact-agile col-md-12" id="contact">
 			<div class="container-fluid">
 				<h3 class="tittle">CONTACTO</h3>

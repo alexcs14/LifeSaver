@@ -102,3 +102,4 @@
 08-06-2017 08:00:09  Error: #42S22 -> SQLSTATE[42S22]: Column not found: 1054 Unknown column 'rol_cod' in 'field list' Archivo: C:\xampp\htdocs\LifeSaver\model\usu.model.php Linea: (29)
 09-06-2017 09:58:06  Error: #42S22 -> SQLSTATE[42S22]: Column not found: 1054 Unknown column 'rol_cod' in 'field list' Archivo: C:\xampp\htdocs\LifeSaver\model\usu.model.php Linea: (29)
 09-06-2017 10:09:20  Error: #42S22 -> SQLSTATE[42S22]: Column not found: 1054 Unknown column 'rol_cod' in 'field list' Archivo: C:\xampp\htdocs\LifeSaver\model\usu.model.php Linea: (29)
+01-07-2017 09:31:41  Error: #23000 -> SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'usu_imagen' cannot be null Archivo: C:\xampp\htdocs\LifeSaver\model\usu.model.php Linea: (28)

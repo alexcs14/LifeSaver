@@ -1,4 +1,3 @@
-<?php require_once 'views/include/menu.php'; ?>
 	<ul id="accordion" class="accordion">
     <li>
     <div class="col col_4 iamgurdeep-pic">
