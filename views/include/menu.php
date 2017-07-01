@@ -8,7 +8,7 @@
                 </div>
                 <div class="navi">
                     <ul class="ca-menu">
-                        <li class="active"><a href="dashboard"></span>
+                        <li class=""><a href="dashboard"></span>
                           <div class="ca-content">
                             <i class="fa fa-home ca-icon" aria-hidden="true"></i><span class="hidden-xs hidden-sm">
                             <h2 class="ca-main">Inicio</h2>
@@ -68,13 +68,6 @@
                         <div class="col-md-5">
                             <div class="header-rightside">
                                 <ul class="list-inline header-top pull-right">
-                                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-                                    <li>
-                                        <a href="#" class="icon-info">
-                                            <i class="fa fa-bell" aria-hidden="true"></i>
-                                            <span class="label label-primary">3</span>
-                                        </a>
-                                    </li>
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://pixel.nymag.com/imgs/daily/vulture/2015/11/25/25-will-smith.w529.h529.jpg" alt="user">
                                             <b class="caret"></b></a>
@@ -87,8 +80,7 @@
                                                     </p>
                                                     <div class="divider">
                                                     </div>
-                                                    <a href="#" class="view2 btn-sm active">Mi Perfil</a>
-                                                    <a href="#" class="view3 btn-sm active">Cerrar Sesión</a>
+                                                    <a href="CerrarSesion" class="view3 btn-sm active">Cerrar Sesión</a>
                                                 </div>
                                             </li>
                                         </ul>

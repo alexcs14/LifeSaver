@@ -175,7 +175,7 @@ public function cambio(){
 
   public function logout(){
     session_destroy();
-    header("location: login");
+    header("location: inicio");
   }
 }
 ?>
