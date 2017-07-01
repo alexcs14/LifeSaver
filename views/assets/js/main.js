@@ -1,23 +1,85 @@
-//Validamos que el correo exista
+//---------------CREAR USUARIO
+$("#frm_registrar").submit(function(e){
+  e.preventDefault();
+  if ($(this).parsley().isValid()){
+    jsonObj = [];
+    $("input[name=data]").each(function(){
+      structure = {}
+      structure = $(this).val();
+      jsonObj.push(structure);
+    });
+  $.post("crear",{datauser:jsonObj},function(data){
+    var data = JSON.parse(data);
+    if (data[0]==true) {
+      document.location.href=data[1];
+    }else{
+      alert(data[1]);
+    }
+  });
+  }
+});
+//-------------------- VALIDAR QUE EL CORREO NO EXISTA EN USUARIO
 
-$("#txtpass").focus(function(){
-  $("#txtemail").siblings("span").remove();
-  var email = $("#txtemail").val();
-  $.post("acceso/validar",{email:email},function(data){
+$("#pas_registro").focus(function(){
+  $("#ema_registro").siblings("span").remove();
+  var email = $("#ema_registro").val();
+  $.post("validar-email",{email:email},function(data){
           var data = JSON.parse(data);
-          if(data[1] == false){
-            $("#txtemail").siblings("label").after("<span class='error'>"+data[0]+"</span>");
-            $("#btnLogin").attr("disabled",true);
+          if(data[0] == false){
+            $("#ema_registro").siblings("label").after("<span class='error'>"+data[1]+"</span>");
+            $("#btn_registrar").attr("disabled",true);
           }else{
-            $("#btnLogin").attr("disabled",false);
+            $("#btn_registrar").attr("disabled",false);
           }
       })
 });
 
 
 
-$("#txtemail").focus(function(){
+$("#ema_registro").focus(function(){
   $(this).siblings("span").remove();
+  $("#btn_registrar").attr("disabled",false);
+});
+//-------------------- VALIDAMOS QUE EL CORREO EXISTA PARA LOGUEARSE
+$("#pas_login").focus(function(){
+  $("#ema_login").siblings("span").remove();
+  var email = $("#ema_login").val();
+  $.post("validar-usuario",{email:email},function(data){
+    var data = JSON.parse(data);
+    if(data[0] == false){
+      $("#ema_login").siblings("label").after("<span class='error'>"+data[1]+"</span>");
+      $("#btn_login").attr("disabled",true);
+    }else{
+      $("#btn_login").attr("disabled",false);
+    }
+  })
+});
+
+
+
+$("#ema_login").focus(function(){
+  $(this).siblings("span").remove();
+  $("#btn_login").attr("disabled",false);
+});
+
+//---------------------------- LOGUEO
+
+$("#frm_login").submit(function(e){
+  e.preventDefault();
+  if($(this).parsley().isValid()){
+    var datalogin=[$("#ema_login").val(),
+    $("#pas_login").val()];
+    $.post("login",{datalogin:datalogin},function(data){
+      var data = JSON.parse(data);
+
+      if(data[0] == true){
+        document.location.href=data[1];
+        localStorage.setItem("Esto no es un token",data[2]);
+      }else{
+        alert(data[1]);
+      }
+    });
+  }
 });
 
 // $("#txtemail").keyup(function(){
@@ -28,17 +90,6 @@ $("#txtemail").focus(function(){
 //   })
 // });
 
-//Usuario creado con exito
-
-$("#crea").submit(function(){
-  $.post("crear",function(data){
-    if(data == true){
-      alert("El usuario ha sido creado con exito, hemos enviado un mensaje a "+email+" para verificar la cuenta");
-    }
-  })
-})
-
-// -- Fin -- //
 
 //Correo existente - Registro
 
@@ -96,31 +147,8 @@ $("#verify").keyup(function(){
 
 
 
-//Inicio de sesion si el usuario existe
-
-$("#frmLogin").submit(function(e){
-  e.preventDefault();
-  if($(this).parsley().isValid()){
-    var email=$("#txtemail").val();
-    var pass=$("#txtpass").val();
-    $.post("validacion",{email:email, pass:pass},function(data){
-      var data = JSON.parse(data);
-
-      if(data[0] == true){
-        document.location.href="legislacion";
-        localStorage.setItem("Esto no es un token",data[2]);
-      }else{
-        alert(data[1]);
-      }
-    })
-    }
-});
-// -- Fin -- //
 
 
-$("#crea").submit(function(){
-  alert("Usuario registrado con exito");
-});
 
 //Recuperar contraseña - email
 

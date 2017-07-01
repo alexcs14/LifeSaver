@@ -3,15 +3,54 @@ require_once 'model/usu.model.php';
 
 class UsuController{
 
-  private $model;
+  private $UsuarioM;
 
   public function __CONSTRUCT(){
-    $this->model = new UsuModel();
+    $this->UsuarioM = new UsuModel();
   }
   public function index(){
     require_once 'views/include/header.php';
     require_once 'views/module/usu_mod/create.php';
     require_once 'views/include/footer.php';
+  }
+  public function validarEmail(){
+    $data[0] = $_POST["email"];
+    $result = $this->UsuarioM->readUsuariobyEmail($data);
+    if(count($result[0])>0){
+      $return = array(false,"El correo ya existe");
+    }else{
+      $return = array(true,"");
+    }
+    echo json_encode($return);
+  }
+  public function create(){
+    $data=$_POST["datauser"];
+    for ($i=0; $i <count($data) ; $i++) {
+      if (empty($data[$i])) {
+        $p=1;
+        break;
+      }else{
+        $p=0;
+      }
+    }
+    if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/",$data[2])) {
+      $return = array(false,"Correo Invalido");
+    }elseif(($data[3]!==$data[4]) || (strlen($data[3])<=8) || (!preg_match('`[0-9]`',$data[3]))){
+       $return = array(false,"Contraseña Invalida");
+    }elseif($p==1){
+      $return = array(false,"Campos Nulos");
+    }else{
+      $data[3]=password_hash($data[3],PASSWORD_DEFAULT);
+      $data[5]=randomAlpha('30');
+      $data[6]=randomAlpha('30');
+      $data[7]="prueba";
+      $data[8]=NULL;
+      $data[9]="default.jpg";
+      $data[10]=0;
+      $result=$this->UsuarioM->usuarioCreate($data);
+      $return = array(true,"$result");
+    }
+      echo json_encode($return);
   }
   public function recoverPass(){
     require_once 'views/include/header.php';

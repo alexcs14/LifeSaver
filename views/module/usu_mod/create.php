@@ -10,29 +10,29 @@
         <h2 class="login">Únete a nosotros</h2>
     <div class="register-form col-xs-12 col-lg-12">
       <div class="col-sm-5 col-sm-offset-1">
-        <form role="form" action="crear" method="post" id="crea" class="r-form" data-parsley-validate>
+        <form role="form" action="" method="post" id="frm_registrar" class="r-form" data-parsley-validate>
           <div class="form-group ">
             <label class="sr-only">Nombres</label>
-            <input type="text" class="r-form-Usuario form-control " name="data[]"  placeholder="Ingresa aquí tus nombres" required>
+            <input type="text" class="r-form-Usuario form-control " name="data"  placeholder="Ingresa aquí tus nombres" required>
           </div>
           <div class="form-group ">
             <label class="sr-only">Apellidos</label>
-            <input type="text" class="r-form-Usuario form-control " name="data[]"  placeholder="Ingresa aquí tus apellidos" required>
+            <input type="text" class="r-form-Usuario form-control " name="data"  placeholder="Ingresa aquí tus apellidos" required>
           </div>
 
           <div class="form-group ">
             <label class="sr-only">Correo</label>
-            <input type="email" class="r-form-Usuario form-control " name="data[]" id="emailRegis" placeholder="Ingresa tu Email" required>
+            <input id="ema_registro" type="email" class="r-form-Usuario form-control " name="data"  placeholder="Ingresa tu Email" required>
           </div>
           <div class="form-group">
             <label class="sr-only">Contraseña</label>
-            <input type="password" class="r-form-Contraseña form-control" name="data[]" id="password" placeholder="Contraseña" required>
+            <input id="pas_registro" type="password" class="r-form-Contraseña form-control" name="data" placeholder="Contraseña" required>
           </div>
           <div class="form-group">
             <label class="sr-only">Repetir Contraseña</label>
-            <input type="password" class="r-form-Contraseña form-control" name="ver" id="verify" placeholder="Repetir Contraseña" required>
+            <input type="password" class="r-form-Contraseña form-control" name="data" placeholder="Repetir Contraseña" required>
           </div>
-          <button type="submit" name="button" id="btnRegister" class="btn btn-primary" >REGISTRARSE</button>
+          <button type="submit" name="button" id="btn_registrar" class="btn btn-primary" >REGISTRARSE</button>
         </form>
         <a href="inicio" class="btn btn-default">Atras</a>
       </div>

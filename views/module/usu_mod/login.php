@@ -10,16 +10,16 @@
         <h2 class="login">Iniciar Sesión</h2>
     <div class="register-form col-xs-12 col-lg-12">
       <div class="col-sm-5 col-sm-offset-1">
-        <form role="form" action="inicio" method="post" id="frmLogin" class="r-form" data-parsley-validate>
+        <form role="form" action="inicio" method="post" id="frm_login" class="r-form" data-parsley-validate>
           <div class="form-group ">
             <label class="sr-only">Usuario</label>
-            <input type="email" class="r-form-Usuario form-control " name="data[]" id="txtemail" placeholder="Email" required>
+            <input type="email" class="r-form-Usuario form-control " name="data[]" id="ema_login" placeholder="Email" required>
           </div>
           <div class="form-group">
             <label class="sr-only">Contraseña</label>
-            <input type="password" class="r-form-Contraseña form-control" name="data[]" id="txtpass" placeholder="Contraseña" required>
+            <input type="password" class="r-form-Contraseña form-control" name="data[]" id="pas_login" placeholder="Contraseña" required>
           </div>
-          <button type="submit" name="button" id="btnLogin" class="btn btn-primary" >INICIAR SESION</button>
+          <button type="submit" name="button" id="btn_login" class="btn btn-primary" >INICIAR SESION</button>
         </form>
         <a href="recover" class="a-olvido">¿Olvidaste tu contraseña?</a><br>
         <div class="form-group">
